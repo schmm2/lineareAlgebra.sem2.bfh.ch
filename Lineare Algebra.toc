@@ -1,0 +1,93 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Vektoren}{3}
+\contentsline {section}{\numberline {1.1}Definition}{3}
+\contentsline {section}{\numberline {1.2}Darstellung von Vektoren im $\mathbb {R}^2$}{3}
+\contentsline {section}{\numberline {1.3}Darstellung von Vektoren im $\mathbb {R}^3$}{4}
+\contentsline {section}{\numberline {1.4}Spezielle Vektoren}{4}
+\contentsline {subsection}{\numberline {1.4.1}Einheistvektor}{4}
+\contentsline {section}{\numberline {1.5}Ortsvektoren}{5}
+\contentsline {section}{\numberline {1.6}Vektorraum}{6}
+\contentsline {section}{\numberline {1.7}Gesetze und Rechenoperationen mit Vektoren}{6}
+\contentsline {subsection}{\numberline {1.7.1}Addition}{6}
+\contentsline {subsection}{\numberline {1.7.2}Skalare Gr\IeC {\"o}sse}{7}
+\contentsline {subsection}{\numberline {1.7.3}Multiplikation mit einem Skalar}{7}
+\contentsline {subsection}{\numberline {1.7.4}Wert eines Vektors}{8}
+\contentsline {subsection}{\numberline {1.7.5}Skalarprodukt}{8}
+\contentsline {subsubsection}{Eigenschaften des Skalarprodukts}{8}
+\contentsline {subsection}{\numberline {1.7.6}Orthogonalit\IeC {\"a}t}{9}
+\contentsline {subsection}{\numberline {1.7.7}Betrag mit Hilfe des Skalarprodukts berechnen}{9}
+\contentsline {section}{\numberline {1.8}Aufgaben}{9}
+\contentsline {section}{\numberline {1.9}Geschlossene Vektorkette}{11}
+\contentsline {section}{\numberline {1.10}Verschiebevektor}{11}
+\contentsline {section}{\numberline {1.11}Linearkombination}{11}
+\contentsline {section}{\numberline {1.12}Lineare Abh\IeC {\"a}ngigkeit bzw. Unabh\IeC {\"a}ngigkeit}{12}
+\contentsline {subsection}{\numberline {1.12.1}Lineare Abh\IeC {\"a}ngigkeit von 2 Vektoren}{12}
+\contentsline {subsection}{\numberline {1.12.2}Lineare Abh\IeC {\"a}ngigkeit im $\mathbb {R}^2$}{13}
+\contentsline {subsection}{\numberline {1.12.3}Eigenschaften von Vektoren im $\mathbb {R}^2$}{13}
+\contentsline {subsection}{\numberline {1.12.4}Lineare Abh\IeC {\"a}ngigkeit von 3 Vektoren}{13}
+\contentsline {subsection}{\numberline {1.12.5}Lineare Abh\IeC {\"a}ngigkeit im $\mathbb {R}^3$}{14}
+\contentsline {subsection}{\numberline {1.12.6}Eigenschaften von Vektoren im $\mathbb {R}^3$}{14}
+\contentsline {section}{\numberline {1.13}Vektorprodukt}{15}
+\contentsline {subsection}{\numberline {1.13.1}Vektorprodukt Richtung}{19}
+\contentsline {subsection}{\numberline {1.13.2}Vektorprodukt Betrag}{22}
+\contentsline {chapter}{\numberline {2}Lineare Gleichungssysteme}{24}
+\contentsline {section}{\numberline {2.1}Additionsmethode}{24}
+\contentsline {section}{\numberline {2.2}Cramersche Regel}{25}
+\contentsline {section}{\numberline {2.3}Regel von Sarrus}{27}
+\contentsline {section}{\numberline {2.4}3 Gleichungen mit 2 Variabeln}{29}
+\contentsline {chapter}{\numberline {3}Vektorgeometrie}{30}
+\contentsline {section}{\numberline {3.1}Geraden}{30}
+\contentsline {subsection}{\numberline {3.1.1}Hauptgerade}{35}
+\contentsline {subsection}{\numberline {3.1.2}Gegenseitige Lage}{36}
+\contentsline {subsubsection}{Parallel}{37}
+\contentsline {subsubsection}{Geschnitten}{38}
+\contentsline {subsubsection}{Windschief}{40}
+\contentsline {section}{\numberline {3.2}Ebenen}{44}
+\contentsline {subsection}{\numberline {3.2.1}Schnittprobleme}{51}
+\contentsline {subsubsection}{Schnitt Gerade mit Ebene}{51}
+\contentsline {subsubsection}{Schnitt Ebene mit Ebene}{53}
+\contentsline {subsubsection}{Lage dreier Ebenen}{58}
+\contentsline {subsubsection}{Parallel}{59}
+\contentsline {subsubsection}{Schnittpunkt}{59}
+\contentsline {subsubsection}{Schnittgerade}{59}
+\contentsline {section}{\numberline {3.3}Normalen und Abstandsprobleme}{62}
+\contentsline {subsection}{\numberline {3.3.1}Zwischenwinkel}{66}
+\contentsline {subsubsection}{Zwischenwinkel zweier Ebenen}{70}
+\contentsline {subsection}{\numberline {3.3.2}Spiegelung}{72}
+\contentsline {subsection}{\numberline {3.3.3}Reflexion}{74}
+\contentsline {subsection}{\numberline {3.3.4}Abstand}{79}
+\contentsline {chapter}{\numberline {4}Kreise und Tangenten}{85}
+\contentsline {section}{\numberline {4.1}Tangenten}{94}
+\contentsline {chapter}{\numberline {5}Abbildungen, Matrizen}{99}
+\contentsline {section}{\numberline {5.1}Abbildungen $R^2 \to R^2$}{99}
+\contentsline {section}{\numberline {5.2}Lineare Abbildungen}{106}
+\contentsline {section}{\numberline {5.3}Operationen mit Matrizen}{109}
+\contentsline {section}{\numberline {5.4}Abbildungen von Kurven}{124}
+\contentsline {section}{\numberline {5.5}Affine Abbildungen}{126}
+\contentsline {section}{\numberline {5.6}Abbildungen $R^3 \to R^2$}{130}
+\contentsline {subsection}{\numberline {5.6.1}Axonometrie}{131}
+\contentsline {section}{\numberline {5.7}Abbildungen $\mathbb {R}^3 \to \mathbb {R}^3$}{136}
+\contentsline {subsection}{\numberline {5.7.1}Spiegelung an der Grundrissebene}{136}
+\contentsline {subsection}{\numberline {5.7.2}Spiegelung am Ursprung}{137}
+\contentsline {subsection}{\numberline {5.7.3}Spiegelung an einer Geraden}{138}
+\contentsline {subsection}{\numberline {5.7.4}Spiegelung an der Geraden $g: \mathaccentV {vec}17E{p} = \lambda \mathaccentV {vec}17E{v}$ mit $|\mathaccentV {vec}17E{v}| = 1$}{139}
+\contentsline {subsection}{\numberline {5.7.5}Spiegelug an der Ebene $\Sigma : ax + by + cz = 0$}{143}
+\contentsline {subsection}{\numberline {5.7.6}Drehung um den Ursprung}{146}
+\contentsline {subsection}{\numberline {5.7.7}Drehung mit Winkel $\delta $ um die gerade $g: p = \lambda \mathaccentV {vec}17E{v}$ , $|\mathaccentV {vec}17E{o}| = 1$ durch den Ursprung}{149}
+\contentsline {section}{\numberline {5.8}Gleichungssysteme 2}{155}
+\contentsline {subsection}{\numberline {5.8.1}Inhomogenes Gleichungssysteme}{155}
+\contentsline {section}{\numberline {5.9}Determinanten}{156}
+\contentsline {subsubsection}{Eigenschaften von Determinanten }{157}
+\contentsline {section}{\numberline {5.10}Gauss Algorithmus}{159}
+\contentsline {section}{\numberline {5.11}Homogene Gleichungssysteme}{161}
+\contentsline {subsection}{\numberline {5.11.1}Inverse Matrix}{168}
+\contentsline {subsection}{\numberline {5.11.2}Eigenvektoren und Eigenwert}{169}
+\contentsline {chapter}{\numberline {6}Komplexe Zahlen}{173}
+\contentsline {section}{\numberline {6.1}Division}{178}
+\contentsline {section}{\numberline {6.2}Potenzieren}{180}
+\contentsline {chapter}{\numberline {7}Kurzreferenz}{184}
+\contentsline {section}{\numberline {7.1}Begriffe}{184}
+\contentsline {chapter}{\numberline {8}Anhang}{185}
+\contentsline {section}{\numberline {8.1}Griechisches Alphabet}{185}
+\contentsline {section}{\numberline {8.2}Polyeder}{186}
+\contentsline {section}{\numberline {8.3}Sinus, Cosinus und Tangens Tabelle}{187}

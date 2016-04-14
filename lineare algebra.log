@@ -1,0 +1,2296 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.2)  3 JUL 2014 19:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"Lineare Algebra.tex"
+(./Lineare Algebra.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/05/16 v3.9f The Babel package
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/05/16 v3.9f Babel common definitions
+\babel@savecnt=\count91
+\U@D=\dimen111
+)
+\l@naustrian = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 92.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+
+Package epstopdf Warning: No graphics package `graphic{s,x}' loaded.
+
+)) (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen112
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen113
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen114
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks19
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks20
+\eqnshift@=\dimen115
+\alignsep@=\dimen116
+\tagshift@=\dimen117
+\tagwidth@=\dimen118
+\totwidth@=\dimen119
+\lineht@=\dimen120
+\@envbody=\toks21
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks28
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count104
+))
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks29
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box28
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen123
+\pgf@y=\dimen124
+\pgf@xa=\dimen125
+\pgf@ya=\dimen126
+\pgf@xb=\dimen127
+\pgf@yb=\dimen128
+\pgf@xc=\dimen129
+\pgf@yc=\dimen130
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count105
+\c@pgf@countb=\count106
+\c@pgf@countc=\count107
+\c@pgf@countd=\count108
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count109
+\pgfsyssoftpath@bigbuffer@items=\count110
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2013/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen131
+\pgfmath@count=\count111
+\pgfmath@box=\box29
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count112
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen132
+\pgf@picmaxx=\dimen133
+\pgf@picminy=\dimen134
+\pgf@picmaxy=\dimen135
+\pgf@pathminx=\dimen136
+\pgf@pathmaxx=\dimen137
+\pgf@pathminy=\dimen138
+\pgf@pathmaxy=\dimen139
+\pgf@xx=\dimen140
+\pgf@xy=\dimen141
+\pgf@yx=\dimen142
+\pgf@yy=\dimen143
+\pgf@zx=\dimen144
+\pgf@zy=\dimen145
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen146
+\pgf@path@lasty=\dimen147
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen148
+\pgf@shorten@start@additional=\dimen149
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box30
+\pgf@hbox=\box31
+\pgf@layerbox@main=\box32
+\pgf@picture@serial@count=\count113
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen150
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen151
+\pgf@pt@y=\dimen152
+\pgf@pt@temp=\dimen153
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen154
+\pgf@sys@shading@range@num=\count114
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box33
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box34
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen155
+\pgf@nodesepend=\dimen156
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen157
+\pgffor@skip=\dimen158
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count115
+\pgfplotmarksize=\dimen159
+)
+\tikz@lastx=\dimen160
+\tikz@lasty=\dimen161
+\tikz@lastxsaved=\dimen162
+\tikz@lastysaved=\dimen163
+\tikzleveldistance=\dimen164
+\tikzsiblingdistance=\dimen165
+\tikz@figbox=\box35
+\tikz@tempbox=\box36
+\tikztreelevel=\count116
+\tikznumberofchildren=\count117
+\tikznumberofcurrentchild=\count118
+\tikz@fig@count=\count119
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count120
+\pgfmatrixcurrentcolumn=\count121
+\pgf@matrix@numberofcolumns=\count122
+)
+\tikz@expandcount=\count123
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2009/09/04 v2.10 (rcs-revision 1.6)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2008/06/18 v2.10 (rcs-revision 1.2)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count124
+\calc@Bcount=\count125
+\calc@Adimen=\dimen166
+\calc@Bdimen=\dimen167
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count126
+\calc@Cskip=\skip51
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count127
+\l_MT_multwidth_dim=\dimen168
+\origjot=\skip52
+\l_MT_shortvdotswithinadjustabove_dim=\dimen169
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen170
+\l_MT_above_intertext_sep=\dimen171
+\l_MT_below_intertext_sep=\dimen172
+\l_MT_above_shortintertext_sep=\dimen173
+\l_MT_below_shortintertext_sep=\dimen174
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen175
+\extrarowheight=\dimen176
+\NC@list=\toks38
+\extratabsurround=\skip53
+\backup@length=\skip54
+)
+\TX@col@width=\dimen177
+\TX@old@table=\dimen178
+\TX@old@col=\dimen179
+\TX@target=\dimen180
+\TX@delta=\dimen181
+\TX@cols=\count128
+\TX@ftn=\toks39
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip55
+\fb@frw=\dimen182
+\fb@frh=\dimen183
+\FrameRule=\dimen184
+\FrameSep=\dimen185
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/blkarray/blkarray.sty
+\c@BAenumi=\count129
+\BA@col=\count130
+\BA@block@cnt=\count131
+\BA@final@box=\box37
+\BA@colsep=\dimen186
+\BA@ftn=\toks40
+\BAextrarowheight=\dimen187
+\BAextraheightafterhline=\dimen188
+\BAarrayrulewidth=\dimen189
+\BAdoublerulesep=\dimen190
+\BAfootskip=\dimen191
+\BA@dashbox=\box38
+\BA@ddashbox=\box39
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box40
+\AM@toc@title=\toks41
+\c@AM@survey=\count132
+\AM@templatesizebox=\box41
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/gb4e/gb4e.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/gb4e/cgloss4e.sty
+\lineone=\box42
+\linetwo=\box43
+\linethree=\box44
+\wordone=\box45
+\wordtwo=\box46
+\wordthree=\box47
+\gline=\box48
+\glossglue=\skip56
+)
+\c@fnx=\count133
+\@xnumdepth=\count134
+\c@xnumi=\count135
+\c@xnumii=\count136
+\c@xnumiii=\count137
+\c@xnumiv=\count138
+\c@exx=\count139
+\c@rxnumi=\count140
+\c@rxnumii=\count141
+\c@rxnumiii=\count142
+\c@rxnumiv=\count143
+\lcommentsep=\skip57
+)
+\c@mydef=\count144
+\c@myexample=\count145
+\c@myproof=\count146
+\c@axiom=\count147
+
+(./Lineare Algebra.aux)
+\openout1 = `"Lineare Algebra.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=591.5302pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=27.31465pt
+* \topmargin=-7.86334pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count148
+\scratchdimen=\dimen192
+\scratchbox=\box49
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen193
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks43
+) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box50
+LaTeX Font Info:    Try loading font information for U+msa on input line 70.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./Lineare Algebra.toc [1
+
+])
+\tf@toc=\write4
+\openout4 = `"Lineare Algebra.toc"'.
+
+ [2] (./Vektorgeometrie.tex
+Kapitel 1.
+<imgs/Vektor1.png, id=25, 290.88675pt x 240.9pt>
+File: imgs/Vektor1.png Graphic file (type png)
+ <use imgs/Vektor1.png>
+Package pdftex.def Info: imgs/Vektor1.png used on input line 10.
+(pdftex.def)             Requested size: 290.88603pt x 240.8994pt.
+
+[3
+
+
+ <./imgs/Vektor1.png>] <imgs/Vektor3D.png, id=33, 284.56313pt x 204.765pt>
+File: imgs/Vektor3D.png Graphic file (type png)
+
+<use imgs/Vektor3D.png>
+Package pdftex.def Info: imgs/Vektor3D.png used on input line 16.
+(pdftex.def)             Requested size: 284.56242pt x 204.76448pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--41
+
+ []
+
+[4 <./imgs/Vektor3D.png>] [5]
+<imgs/VektorAddition.png, id=44, 440.39531pt x 181.42781pt>
+File: imgs/VektorAddition.png Graphic file (type png)
+
+<use imgs/VektorAddition.png>
+Package pdftex.def Info: imgs/VektorAddition.png used on input line 98.
+(pdftex.def)             Requested size: 374.33777pt x 154.21436pt.
+ [6]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 104.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+
+<imgs/VektorMultiplikation.png, id=50, 440.39531pt x 194.22563pt>
+File: imgs/VektorMultiplikation.png Graphic file (type png)
+
+<use imgs/VektorMultiplikation.png>
+Package pdftex.def Info: imgs/VektorMultiplikation.png used on input line 119.
+(pdftex.def)             Requested size: 374.33777pt x 165.09254pt.
+ [7 <./imgs/VektorAddition.png>] [8 <./imgs/VektorMultiplikation.png>]
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 151
+.
+
+<imgs/Orthogonalitaet.png, id=58, 300.3722pt x 211.54031pt>
+File: imgs/Orthogonalitaet.png Graphic file (type png)
+
+<use imgs/Orthogonalitaet.png>
+Package pdftex.def Info: imgs/Orthogonalitaet.png used on input line 152.
+(pdftex.def)             Requested size: 255.31755pt x 179.81009pt.
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 164
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+
+ []
+
+[9 <./imgs/Orthogonalitaet.png>]
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 179
+.
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 191
+.
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 206--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--221
+
+ []
+
+<imgs/Linearkombination1.png, id=66, 192.11775pt x 165.61874pt>
+File: imgs/Linearkombination1.png Graphic file (type png)
+
+<use imgs/Linearkombination1.png>
+Package pdftex.def Info: imgs/Linearkombination1.png used on input line 235.
+(pdftex.def)             Requested size: 211.33017pt x 182.18117pt.
+ [11]
+<imgs/pic2.png, id=70, 54.2025pt x 60.225pt>
+File: imgs/pic2.png Graphic file (type png)
+ <use imgs/pic2.png>
+Package pdftex.def Info: imgs/pic2.png used on input line 238.
+(pdftex.def)             Requested size: 48.78178pt x 54.20198pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--256
+
+ []
+
+[12 <./imgs/Linearkombination1.png> <./imgs/pic2.png>] [13]
+<imgs/pic1.png, id=80, 100.12407pt x 100.12407pt>
+File: imgs/pic1.png Graphic file (type png)
+ <use imgs/pic1.png>
+Package pdftex.def Info: imgs/pic1.png used on input line 300.
+(pdftex.def)             Requested size: 90.11081pt x 90.11081pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+[14 <./imgs/pic1.png>]
+<imgs/Vektorprodukt.png, id=85, 451.6875pt x 310.15875pt>
+File: imgs/Vektorprodukt.png Graphic file (type png)
+
+<use imgs/Vektorprodukt.png>
+Package pdftex.def Info: imgs/Vektorprodukt.png used on input line 318.
+(pdftex.def)             Requested size: 316.17908pt x 217.10963pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--327
+
+ []
+
+[15 <./imgs/Vektorprodukt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 373--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--377
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 410--414
+
+ []
+
+[17]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [18]
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
+
+ []
+
+<imgs/richtung_kreuzprodukt.png, id=99, 96.36pt x 69.6201pt>
+File: imgs/richtung_kreuzprodukt.png Graphic file (type png)
+
+<use imgs/richtung_kreuzprodukt.png>
+Package pdftex.def Info: imgs/richtung_kreuzprodukt.png used on input line 512.
+
+(pdftex.def)             Requested size: 341.43437pt x 246.72705pt.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+<imgs/rechtssystem.png, id=100, 96.36pt x 81.6651pt>
+File: imgs/rechtssystem.png Graphic file (type png)
+
+<use imgs/rechtssystem.png>
+Package pdftex.def Info: imgs/rechtssystem.png used on input line 550.
+(pdftex.def)             Requested size: 341.43437pt x 289.41339pt.
+ [19 <./imgs/richtung_kreuzprodukt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
+
+ []
+
+<imgs/rechtssystem_reihenfolge.png, id=105, 77.20845pt x 96.36pt>
+File: imgs/rechtssystem_reihenfolge.png Graphic file (type png)
+
+<use imgs/rechtssystem_reihenfolge.png>
+Package pdftex.def Info: imgs/rechtssystem_reihenfolge.png used on input line 5
+54.
+(pdftex.def)             Requested size: 341.43437pt x 426.24069pt.
+ [20 <./imgs/rechtssystem.png>] [21 <./imgs/rechtssystem_reihenfolge.png>]
+<imgs/kreuzprodukt_flaecheninhalt.png, id=113, 96.36pt x 50.95035pt>
+File: imgs/kreuzprodukt_flaecheninhalt.png Graphic file (type png)
+
+<use imgs/kreuzprodukt_flaecheninhalt.png>
+Package pdftex.def Info: imgs/kreuzprodukt_flaecheninhalt.png used on input lin
+e 563.
+(pdftex.def)             Requested size: 341.43437pt x 180.5632pt.
+
+<imgs/tetraeder.png, id=114, 96.36pt x 81.4242pt>
+File: imgs/tetraeder.png Graphic file (type png)
+ <use imgs/tetraeder.png>
+Package pdftex.def Info: imgs/tetraeder.png used on input line 568.
+(pdftex.def)             Requested size: 341.43437pt x 288.5597pt.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+[22 <./imgs/kreuzprodukt_flaecheninhalt.png> <./imgs/tetraeder.png>] [23]
+Kapitel 2.
+[24
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 669--672
+
+ []
+
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 763--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--771
+
+ []
+
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--808
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--808
+
+ []
+
+[27]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [28] [29]
+Kapitel 3.
+<imgs/rissebene.png, id=141, 96.36pt x 69.01785pt>
+File: imgs/rissebene.png Graphic file (type png)
+ <use imgs/rissebene.png>
+Package pdftex.def Info: imgs/rissebene.png used on input line 974.
+(pdftex.def)             Requested size: 341.43437pt x 244.59273pt.
+
+<imgs/spurpunkte.png, id=142, 96.36pt x 76.00395pt>
+File: imgs/spurpunkte.png Graphic file (type png)
+ <use imgs/spurpunkte.png>
+Package pdftex.def Info: imgs/spurpunkte.png used on input line 988.
+(pdftex.def)             Requested size: 341.43437pt x 269.35081pt.
+
+[30
+
+ <./imgs/rissebene.png>]
+<imgs/geradengleichung.png, id=148, 273.54195pt x 132.61545pt>
+File: imgs/geradengleichung.png Graphic file (type png)
+
+<use imgs/geradengleichung.png>
+Package pdftex.def Info: imgs/geradengleichung.png used on input line 1005.
+(pdftex.def)             Requested size: 341.43437pt x 165.53618pt.
+ [31 <./imgs/spurpunkte.png> <./imgs/geradengleichung.png>]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1032.
+
+ <imgs/parametergleichung.png, id=153, 250.7769pt x 208.49895pt>
+File: imgs/parametergleichung.png Graphic file (type png)
+
+<use imgs/parametergleichung.png>
+Package pdftex.def Info: imgs/parametergleichung.png used on input line 1040.
+(pdftex.def)             Requested size: 341.43437pt x 283.90158pt.
+ [32] [33 <./imgs/parametergleichung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
+
+ []
+
+<imgs/erstprojizierende_gerade.png, id=161, 119.84775pt x 102.50294pt>
+File: imgs/erstprojizierende_gerade.png Graphic file (type png)
+
+<use imgs/erstprojizierende_gerade.png>
+Package pdftex.def Info: imgs/erstprojizierende_gerade.png used on input line 1
+079.
+(pdftex.def)             Requested size: 341.43437pt x 292.02844pt.
+ [34 <./imgs/erstprojizierende_gerade.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1092
+
+ []
+
+<imgs/hauptgerade.png, id=165, 96.36pt x 74.679pt>
+File: imgs/hauptgerade.png Graphic file (type png)
+ <use imgs/hauptgerade.png>
+Package pdftex.def Info: imgs/hauptgerade.png used on input line 1093.
+(pdftex.def)             Requested size: 341.43437pt x 264.6553pt.
+
+[35 <./imgs/hauptgerade.png>]
+<imgs/gegenseitige_lage.png, id=170, 302.93175pt x 185.493pt>
+File: imgs/gegenseitige_lage.png Graphic file (type png)
+
+<use imgs/gegenseitige_lage.png>
+Package pdftex.def Info: imgs/gegenseitige_lage.png used on input line 1108.
+(pdftex.def)             Requested size: 341.43437pt x 209.08385pt.
+ [36 <./imgs/gegenseitige_lage.png>] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1148
+
+ []
+
+<imgs/schnittpunkt_vektoren.png, id=179, 299.31825pt x 177.7842pt>
+File: imgs/schnittpunkt_vektoren.png Graphic file (type png)
+
+<use imgs/schnittpunkt_vektoren.png>
+Package pdftex.def Info: imgs/schnittpunkt_vektoren.png used on input line 1149
+.
+(pdftex.def)             Requested size: 341.43437pt x 202.80084pt.
+ [38 <./imgs/schnittpunkt_vektoren.png>]
+[39] <imgs/transversale.png, id=187, 96.36pt x 73.11314pt>
+File: imgs/transversale.png Graphic file (type png)
+
+<use imgs/transversale.png>
+Package pdftex.def Info: imgs/transversale.png used on input line 1184.
+(pdftex.def)             Requested size: 341.43437pt x 259.1061pt.
+
+<imgs/transversale_beispiel1.png, id=188, 96.36pt x 97.3236pt>
+File: imgs/transversale_beispiel1.png Graphic file (type png)
+
+<use imgs/transversale_beispiel1.png>
+Package pdftex.def Info: imgs/transversale_beispiel1.png used on input line 119
+7.
+(pdftex.def)             Requested size: 341.43437pt x 344.9056pt.
+ [40 <./imgs/transversale.png>] [41 <./imgs/transversale_beispiel1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1217
+
+ []
+
+<imgs/transversale_beispiel2.png, id=197, 168.63pt x 158.5122pt>
+File: imgs/transversale_beispiel2.png Graphic file (type png)
+
+<use imgs/transversale_beispiel2.png>
+Package pdftex.def Info: imgs/transversale_beispiel2.png used on input line 121
+8.
+(pdftex.def)             Requested size: 341.43437pt x 320.95642pt.
+ [42 <./imgs/transversale_beispiel2.png>]
+[43] <imgs/ebenen.png, id=206, 96.36pt x 67.81335pt>
+File: imgs/ebenen.png Graphic file (type png)
+ <use imgs/ebenen.png>
+Package pdftex.def Info: imgs/ebenen.png used on input line 1271.
+(pdftex.def)             Requested size: 341.43437pt x 240.3241pt.
+
+<imgs/ebenen_beispiel1.png, id=207, 168.63pt x 120.6909pt>
+File: imgs/ebenen_beispiel1.png Graphic file (type png)
+
+<use imgs/ebenen_beispiel1.png>
+Package pdftex.def Info: imgs/ebenen_beispiel1.png used on input line 1290.
+(pdftex.def)             Requested size: 341.43437pt x 244.37561pt.
+ [44 <./imgs/ebenen.png>]
+<imgs/parametergleichung_ebene.png, id=212, 527.9725pt x 464.73625pt>
+File: imgs/parametergleichung_ebene.png Graphic file (type png)
+
+<use imgs/parametergleichung_ebene.png>
+Package pdftex.def Info: imgs/parametergleichung_ebene.png used on input line 1
+306.
+(pdftex.def)             Requested size: 341.43437pt x 300.53616pt.
+ [45 <./imgs/ebenen_beispiel1.png>]
+[46 <./imgs/parametergleichung_ebene.png>]
+<imgs/hauptebenen.png, id=220, 96.36pt x 67.57245pt>
+File: imgs/hauptebenen.png Graphic file (type png)
+
+<use imgs/hauptebenen.png>
+Package pdftex.def Info: imgs/hauptebenen.png used on input line 1361.
+(pdftex.def)             Requested size: 341.43437pt x 239.47034pt.
+ [47]
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1369
+
+ []
+
+<imgs/zweitprojizierende_ebene.png, id=224, 96.36pt x 67.57245pt>
+File: imgs/zweitprojizierende_ebene.png Graphic file (type png)
+
+<use imgs/zweitprojizierende_ebene.png>
+Package pdftex.def Info: imgs/zweitprojizierende_ebene.png used on input line 1
+380.
+(pdftex.def)             Requested size: 341.43437pt x 239.47034pt.
+ [48 <./imgs/hauptebenen.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1395--1398
+
+ []
+
+<imgs/symmetrie_koinzidenzebene.png, id=229, 96.36pt x 62.75446pt>
+File: imgs/symmetrie_koinzidenzebene.png Graphic file (type png)
+
+<use imgs/symmetrie_koinzidenzebene.png>
+Package pdftex.def Info: imgs/symmetrie_koinzidenzebene.png used on input line 
+1399.
+(pdftex.def)             Requested size: 341.43437pt x 222.39584pt.
+ [49 <./imgs/zweitprojizierende_ebene.png>] [50 <./imgs/symmetrie_koinzidenzebe
+ne.png>]
+<imgs/durchstosspunkt.png, id=238, 120.45pt x 58.2978pt>
+File: imgs/durchstosspunkt.png Graphic file (type png)
+
+<use imgs/durchstosspunkt.png>
+Package pdftex.def Info: imgs/durchstosspunkt.png used on input line 1414.
+(pdftex.def)             Requested size: 341.43437pt x 165.27068pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1416--1419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1435--1437
+
+ []
+
+[51 <./imgs/durchstosspunkt.png>] [52]
+<imgs/schnittgerade.png, id=246, 80.4606pt x 96.36pt>
+File: imgs/schnittgerade.png Graphic file (type png)
+
+<use imgs/schnittgerade.png>
+Package pdftex.def Info: imgs/schnittgerade.png used on input line 1461.
+(pdftex.def)             Requested size: 341.43437pt x 409.01869pt.
+ [53 <./imgs/schnittgerade.png>] [54] [55]
+<imgs/Spurgeraden.png, id=258, 96.36pt x 76.48575pt>
+File: imgs/Spurgeraden.png Graphic file (type png)
+
+<use imgs/Spurgeraden.png>
+Package pdftex.def Info: imgs/Spurgeraden.png used on input line 1566.
+(pdftex.def)             Requested size: 341.43437pt x 271.05821pt.
+ [56 <./imgs/Spurgeraden.png>]
+<imgs/lage_drei_ebenen.png, id=263, 155.8623pt x 192.72pt>
+File: imgs/lage_drei_ebenen.png Graphic file (type png)
+
+<use imgs/lage_drei_ebenen.png>
+Package pdftex.def Info: imgs/lage_drei_ebenen.png used on input line 1591.
+(pdftex.def)             Requested size: 426.79135pt x 527.7761pt.
+ [57] [58 <./imgs/lage_drei_ebenen.png>]
+[59] [60] [61] <imgs/Normalenvektor1.png, id=282, 168.63pt x 141.1674pt>
+File: imgs/Normalenvektor1.png Graphic file (type png)
+
+<use imgs/Normalenvektor1.png>
+Package pdftex.def Info: imgs/Normalenvektor1.png used on input line 1696.
+(pdftex.def)             Requested size: 341.43437pt x 285.83653pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
+
+ []
+
+<imgs/Normalenvektor2.png, id=283, 168.63pt x 113.4639pt>
+File: imgs/Normalenvektor2.png Graphic file (type png)
+
+<use imgs/Normalenvektor2.png>
+Package pdftex.def Info: imgs/Normalenvektor2.png used on input line 1703.
+(pdftex.def)             Requested size: 341.43437pt x 229.74232pt.
+ [62 <./imgs/Normalenvektor1.png>] [63 <./imgs/Normalenvektor2.png>]
+<imgs/Normalenvektor_Beispiel_1.png, id=293, 96.36pt x 78.7743pt>
+File: imgs/Normalenvektor_Beispiel_1.png Graphic file (type png)
+
+<use imgs/Normalenvektor_Beispiel_1.png>
+Package pdftex.def Info: imgs/Normalenvektor_Beispiel_1.png used on input line 
+1733.
+(pdftex.def)             Requested size: 341.43437pt x 279.16872pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1740--1741
+
+ []
+
+<imgs/Normalenvektor_Beispiel_2.png, id=294, 96.36pt x 73.4745pt>
+File: imgs/Normalenvektor_Beispiel_2.png Graphic file (type png)
+
+<use imgs/Normalenvektor_Beispiel_2.png>
+Package pdftex.def Info: imgs/Normalenvektor_Beispiel_2.png used on input line 
+1742.
+(pdftex.def)             Requested size: 341.43437pt x 260.38667pt.
+ [64 <./imgs/Normalenvektor_Beispiel_1.png>] [65 <./imgs/Normalenvektor_Beispie
+l_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1761--1762
+
+ []
+
+<imgs/Zwischenwinkel1.png, id=303, 96.36pt x 68.29515pt>
+File: imgs/Zwischenwinkel1.png Graphic file (type png)
+
+<use imgs/Zwischenwinkel1.png>
+Package pdftex.def Info: imgs/Zwischenwinkel1.png used on input line 1763.
+(pdftex.def)             Requested size: 341.43437pt x 242.03154pt.
+
+<imgs/Zwischenwinkel2.png, id=304, 96.36pt x 72.7518pt>
+File: imgs/Zwischenwinkel2.png Graphic file (type png)
+
+<use imgs/Zwischenwinkel2.png>
+Package pdftex.def Info: imgs/Zwischenwinkel2.png used on input line 1772.
+(pdftex.def)             Requested size: 341.43437pt x 257.82547pt.
+ [66 <./imgs/Zwischenwinkel1.png>]
+<imgs/CosinusKurve.png, id=310, 96.36pt x 67.09065pt>
+File: imgs/CosinusKurve.png Graphic file (type png)
+
+<use imgs/CosinusKurve.png>
+Package pdftex.def Info: imgs/CosinusKurve.png used on input line 1779.
+(pdftex.def)             Requested size: 341.43437pt x 237.7629pt.
+ [67 <./imgs/Zwischenwinkel2.png> <./imgs/CosinusKurve.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1792--1797
+
+ []
+
+[68] [69] <imgs//Zwischenwinkel_Ebenen.png, id=322, 96.36pt x 83.1105pt>
+File: imgs//Zwischenwinkel_Ebenen.png Graphic file (type png)
+
+<use imgs//Zwischenwinkel_Ebenen.png>
+Package pdftex.def Info: imgs//Zwischenwinkel_Ebenen.png used on input line 184
+5.
+(pdftex.def)             Requested size: 341.43437pt x 294.53572pt.
+
+<imgs/Zwischenwinkel_Ebenen_Schnitt.png, id=323, 192.72pt x 184.7703pt>
+File: imgs/Zwischenwinkel_Ebenen_Schnitt.png Graphic file (type png)
+
+<use imgs/Zwischenwinkel_Ebenen_Schnitt.png>
+Package pdftex.def Info: imgs/Zwischenwinkel_Ebenen_Schnitt.png used on input l
+ine 1849.
+(pdftex.def)             Requested size: 341.43437pt x 327.35071pt.
+ [70 <./imgs//Zwischenwinkel_Ebenen.png>] [71 <./imgs/Zwischenwinkel_Ebenen_Sch
+nitt.png>]
+<imgs/Spiegelung_Punkt1.png, id=332, 96.36pt x 81.906pt>
+File: imgs/Spiegelung_Punkt1.png Graphic file (type png)
+
+<use imgs/Spiegelung_Punkt1.png>
+Package pdftex.def Info: imgs/Spiegelung_Punkt1.png used on input line 1867.
+(pdftex.def)             Requested size: 341.43437pt x 290.26714pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1869--1873
+
+ []
+
+<imgs/Spiegelung_Punkt2.png, id=333, 96.36pt x 82.3878pt>
+File: imgs/Spiegelung_Punkt2.png Graphic file (type png)
+
+<use imgs/Spiegelung_Punkt2.png>
+Package pdftex.def Info: imgs/Spiegelung_Punkt2.png used on input line 1887.
+(pdftex.def)             Requested size: 341.43437pt x 291.97453pt.
+ [72 <./imgs/Spiegelung_Punkt1.png>] [73 <./imgs/Spiegelung_Punkt2.png>]
+<imgs/Reflexion_Winkel.png, id=343, 96.36pt x 56.3706pt>
+File: imgs/Reflexion_Winkel.png Graphic file (type png)
+
+<use imgs/Reflexion_Winkel.png>
+Package pdftex.def Info: imgs/Reflexion_Winkel.png used on input line 1901.
+(pdftex.def)             Requested size: 341.43437pt x 199.77208pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1903--1904
+
+ []
+
+<imgs/Reflexion_Spiegelbild.png, id=344, 96.36pt x 66.9702pt>
+File: imgs/Reflexion_Spiegelbild.png Graphic file (type png)
+
+<use imgs/Reflexion_Spiegelbild.png>
+Package pdftex.def Info: imgs/Reflexion_Spiegelbild.png used on input line 1905
+.
+(pdftex.def)             Requested size: 341.43437pt x 237.33607pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1907--1908
+
+ []
+
+[74 <./imgs/Reflexion_Winkel.png> <./imgs/Reflexion_Spiegelbild.png>]
+<imgs/Reflexion_Lichtstrahl.png, id=350, 87.32625pt x 96.36pt>
+File: imgs/Reflexion_Lichtstrahl.png Graphic file (type png)
+
+<use imgs/Reflexion_Lichtstrahl.png>
+Package pdftex.def Info: imgs/Reflexion_Lichtstrahl.png used on input line 1911
+.
+(pdftex.def)             Requested size: 341.43437pt x 376.81252pt.
+ [75 <./imgs/Reflexion_Lichtstrahl.png>]
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 1941--1945
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1955--1960
+
+ []
+
+[77
+
+] [78] <imgs/Abstand.png, id=365, 96.36pt x 50.95035pt>
+File: imgs/Abstand.png Graphic file (type png)
+
+<use imgs/Abstand.png>
+Package pdftex.def Info: imgs/Abstand.png used on input line 1988.
+(pdftex.def)             Requested size: 341.43437pt x 180.5632pt.
+ [79 <./imgs/Abstand.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2041--2042
+
+ []
+
+<imgs/Abstand_Ebenen.png, id=370, 96.36pt x 40.2303pt>
+File: imgs/Abstand_Ebenen.png Graphic file (type png)
+
+<use imgs/Abstand_Ebenen.png>
+Package pdftex.def Info: imgs/Abstand_Ebenen.png used on input line 2043.
+(pdftex.def)             Requested size: 341.43437pt x 142.57237pt.
+ [80 <./imgs/Abstand_Ebenen.png>] [81] [82
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 2088--2089
+
+ []
+
+<imgs/Abstand_Ebenen_Beispiel_2.png, id=381, 96.36pt x 66.60886pt>
+File: imgs/Abstand_Ebenen_Beispiel_2.png Graphic file (type png)
+
+<use imgs/Abstand_Ebenen_Beispiel_2.png>
+Package pdftex.def Info: imgs/Abstand_Ebenen_Beispiel_2.png used on input line 
+2090.
+(pdftex.def)             Requested size: 341.43437pt x 236.05545pt.
+ [83
+
+ <./imgs/Abstand_Ebenen_Beispiel_2.png>] [84]
+Kapitel 4.
+<imgs/Kreis_Koordinatengleichung.png, id=390, 94.79414pt x 91.542pt>
+File: imgs/Kreis_Koordinatengleichung.png Graphic file (type png)
+
+<use imgs/Kreis_Koordinatengleichung.png>
+Package pdftex.def Info: imgs/Kreis_Koordinatengleichung.png used on input line
+ 2121.
+(pdftex.def)             Requested size: 341.43437pt x 329.76466pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2123--2125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2123--2125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2128--2130
+
+ []
+
+[85
+
+ <./imgs/Kreis_Koordinatengleichung.png>]
+<imgs/Kreis_Parametergleichung.png, id=395, 96.36pt x 90.0966pt>
+File: imgs/Kreis_Parametergleichung.png Graphic file (type png)
+
+<use imgs/Kreis_Parametergleichung.png>
+Package pdftex.def Info: imgs/Kreis_Parametergleichung.png used on input line 2
+131.
+(pdftex.def)             Requested size: 341.43437pt x 319.29387pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2142--2144
+
+ []
+
+<imgs/Kreis_Parametergleichung_Beliebig.png, id=396, 96.36pt x 70.94505pt>
+File: imgs/Kreis_Parametergleichung_Beliebig.png Graphic file (type png)
+
+<use imgs/Kreis_Parametergleichung_Beliebig.png>
+Package pdftex.def Info: imgs/Kreis_Parametergleichung_Beliebig.png used on inp
+ut line 2145.
+(pdftex.def)             Requested size: 341.43437pt x 251.42256pt.
+ [86 <./imgs/Kreis_Parametergleichung.png>] [87 <./imgs/Kreis_Parametergleichun
+g_Beliebig.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2208--2209
+
+ []
+
+<imgs/Kreis_Beispiel_2c.png, id=405, 96.36pt x 78.7743pt>
+File: imgs/Kreis_Beispiel_2c.png Graphic file (type png)
+
+<use imgs/Kreis_Beispiel_2c.png>
+Package pdftex.def Info: imgs/Kreis_Beispiel_2c.png used on input line 2210.
+(pdftex.def)             Requested size: 341.43437pt x 279.16872pt.
+ [88] [89 <./imgs/Kreis_Beispiel_2c.png>]
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2255
+
+ []
+
+[91
+
+] [92] [93] <imgs/tangenten_aufUrsprung.png, id=426, 168.63pt x 132.495pt>
+File: imgs/tangenten_aufUrsprung.png Graphic file (type png)
+
+<use imgs/tangenten_aufUrsprung.png>
+Package pdftex.def Info: imgs/tangenten_aufUrsprung.png used on input line 2328
+.
+(pdftex.def)             Requested size: 341.43437pt x 268.27661pt.
+ [94 <./imgs/tangenten_aufUrsprung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2357--2359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2357--2359
+
+ []
+
+<imgs/tangenten_NichtAufUrsprung.png, id=431, 168.63pt x 120.45pt>
+File: imgs/tangenten_NichtAufUrsprung.png Graphic file (type png)
+
+<use imgs/tangenten_NichtAufUrsprung.png>
+Package pdftex.def Info: imgs/tangenten_NichtAufUrsprung.png used on input line
+ 2371.
+(pdftex.def)             Requested size: 341.43437pt x 243.88783pt.
+ [95 <./imgs/tangenten_NichtAufUrsprung.png>] [96] <imgs/tangenten.png, id=440,
+ 168.63pt x 127.4361pt>
+File: imgs/tangenten.png Graphic file (type png)
+
+<use imgs/tangenten.png>
+Package pdftex.def Info: imgs/tangenten.png used on input line 2381.
+(pdftex.def)             Requested size: 341.43437pt x 258.03333pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2383--2387
+
+ []
+
+[97 <./imgs/tangenten.png>]) [98]
+Kapitel 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+<imgs/abbildungen_translation.png, id=448, 702.625pt x 622.325pt>
+File: imgs/abbildungen_translation.png Graphic file (type png)
+
+<use imgs/abbildungen_translation.png>
+Package pdftex.def Info: imgs/abbildungen_translation.png used on input line 89
+.
+(pdftex.def)             Requested size: 298.75264pt x 264.61281pt.
+ [99
+
+ <./imgs/abbildungen_translation.png>] [100]
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+<imgs/abbildungen_spiegelung_xAchse.png, id=458, 702.625pt x 834.11626pt>
+File: imgs/abbildungen_spiegelung_xAchse.png Graphic file (type png)
+
+<use imgs/abbildungen_spiegelung_xAchse.png>
+Package pdftex.def Info: imgs/abbildungen_spiegelung_xAchse.png used on input l
+ine 101.
+(pdftex.def)             Requested size: 298.75264pt x 354.66655pt.
+ [101 <./imgs/abbildungen_spiegelung_xAchse.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+<imgs/abbildungen_punktSpiegelung.png, id=463, 702.625pt x 618.31pt>
+File: imgs/abbildungen_punktSpiegelung.png Graphic file (type png)
+
+<use imgs/abbildungen_punktSpiegelung.png>
+Package pdftex.def Info: imgs/abbildungen_punktSpiegelung.png used on input lin
+e 111.
+(pdftex.def)             Requested size: 341.43437pt x 300.47437pt.
+ [102 <./imgs/abbildungen_punktSpiegelung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+<imgs/abbildungen_rotation.png, id=469, 702.625pt x 635.37375pt>
+File: imgs/abbildungen_rotation.png Graphic file (type png)
+
+<use imgs/abbildungen_rotation.png>
+Package pdftex.def Info: imgs/abbildungen_rotation.png used on input line 128.
+(pdftex.def)             Requested size: 341.43437pt x 308.76668pt.
+ [103 <./imgs/abbildungen_rotation.png>]
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 150--150
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--155
+
+ []
+
+[104]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+<imgs/abbildungen_zentrischeStreckung.png, id=477, 702.625pt x 415.5525pt>
+File: imgs/abbildungen_zentrischeStreckung.png Graphic file (type png)
+
+<use imgs/abbildungen_zentrischeStreckung.png>
+Package pdftex.def Info: imgs/abbildungen_zentrischeStreckung.png used on input
+ line 166.
+(pdftex.def)             Requested size: 341.43437pt x 201.94218pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 186--186
+ [][] 
+ []
+
+[105 <./imgs/abbildungen_zentrischeStreckung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
+
+ []
+
+
+LaTeX Warning: Reference `spiegelungXAchseBeispiel' on page 106 undefined on in
+put line 222.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--224
+
+ []
+
+
+LaTeX Warning: Reference `spiegelungUrsprungBeispiel' on page 106 undefined on 
+input line 227.
+
+
+LaTeX Warning: Reference `rotationBeispiel' on page 106 undefined on input line
+ 232.
+
+[106
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 252--256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
+
+ []
+
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+<imgs/mmMatrix.png, id=488, 165.9801pt x 119.2455pt>
+File: imgs/mmMatrix.png Graphic file (type png)
+ <use imgs/mmMatrix.png>
+Package pdftex.def Info: imgs/mmMatrix.png used on input line 294.
+(pdftex.def)             Requested size: 170.71393pt x 122.65318pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--305
+
+ []
+
+[108 <./imgs/mmMatrix.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 345--349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
+
+ []
+
+<imgs/multiplikation_Matrizen.png, id=494, 168.63pt x 160.6803pt>
+File: imgs/multiplikation_Matrizen.png Graphic file (type png)
+
+<use imgs/multiplikation_Matrizen.png>
+Package pdftex.def Info: imgs/multiplikation_Matrizen.png used on input line 35
+7.
+(pdftex.def)             Requested size: 341.43437pt x 325.34639pt.
+ [109]
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
+
+ []
+
+<imgs/verkettungFunktionen.png, id=498, 162.6075pt x 136.8312pt>
+File: imgs/verkettungFunktionen.png Graphic file (type png)
+
+<use imgs/verkettungFunktionen.png>
+Package pdftex.def Info: imgs/verkettungFunktionen.png used on input line 379.
+(pdftex.def)             Requested size: 341.43437pt x 287.3331pt.
+ [110 <./imgs/multiplikation_Matrizen.png>]
+[111 <./imgs/verkettungFunktionen.png>]
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 399--399
+ [][] 
+ []
+
+[112]
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
+
+ []
+
+<imgs/doppelteSpiegelung.png, id=510, 153.2124pt x 108.1641pt>
+File: imgs/doppelteSpiegelung.png Graphic file (type png)
+
+<use imgs/doppelteSpiegelung.png>
+Package pdftex.def Info: imgs/doppelteSpiegelung.png used on input line 418.
+(pdftex.def)             Requested size: 341.43437pt x 241.08105pt.
+ [113 <./imgs/doppelteSpiegelung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 478--481
+
+ []
+
+[114] [115] [116] [117]
+Underfull \hbox (badness 10000) in paragraph at lines 504--506
+
+ []
+
+<imgs/MatrizenAssoziativ.png, id=528, 168.63pt x 64.5612pt>
+File: imgs/MatrizenAssoziativ.png Graphic file (type png)
+
+<use imgs/MatrizenAssoziativ.png>
+Package pdftex.def Info: imgs/MatrizenAssoziativ.png used on input line 507.
+(pdftex.def)             Requested size: 341.43437pt x 130.72388pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
+
+ []
+
+<imgs/Umkehrabbildung.png, id=529, 168.63pt x 95.1555pt>
+File: imgs/Umkehrabbildung.png Graphic file (type png)
+
+<use imgs/Umkehrabbildung.png>
+Package pdftex.def Info: imgs/Umkehrabbildung.png used on input line 533.
+(pdftex.def)             Requested size: 341.43437pt x 192.67136pt.
+ [118 <./imgs/MatrizenAssoziativ.png>] [119 <./imgs/Umkehrabbildung.png>] [120]
+ [121]
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 650--650
+ [][] 
+ []
+
+[122] [123] [124]
+<imgs/AbbildungKreisgleichung.png, id=555, 168.63pt x 159.7167pt>
+File: imgs/AbbildungKreisgleichung.png Graphic file (type png)
+
+<use imgs/AbbildungKreisgleichung.png>
+Package pdftex.def Info: imgs/AbbildungKreisgleichung.png used on input line 72
+8.
+(pdftex.def)             Requested size: 298.75264pt x 282.96906pt.
+ [125 <./imgs/AbbildungKreisgleichung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
+
+ []
+
+<imgs/SpiegelungGeraden.png, id=560, 168.63pt x 145.0218pt>
+File: imgs/SpiegelungGeraden.png Graphic file (type png)
+
+<use imgs/SpiegelungGeraden.png>
+Package pdftex.def Info: imgs/SpiegelungGeraden.png used on input line 757.
+(pdftex.def)             Requested size: 341.43437pt x 293.64096pt.
+ [126 <./imgs/SpiegelungGeraden.png>] [127]
+[128] [129]
+Underfull \hbox (badness 10000) in paragraph at lines 887--892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 887--892
+
+ []
+
+<imgs/zentralprojektion.png, id=574, 168.63pt x 67.6929pt>
+File: imgs/zentralprojektion.png Graphic file (type png)
+
+<use imgs/zentralprojektion.png>
+Package pdftex.def Info: imgs/zentralprojektion.png used on input line 893.
+(pdftex.def)             Requested size: 341.43437pt x 137.06497pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--898
+
+ []
+
+<imgs/paralellprojektion.png, id=575, 168.63pt x 96.1191pt>
+File: imgs/paralellprojektion.png Graphic file (type png)
+
+<use imgs/paralellprojektion.png>
+Package pdftex.def Info: imgs/paralellprojektion.png used on input line 899.
+(pdftex.def)             Requested size: 341.43437pt x 194.62245pt.
+
+<imgs/axonometrie1.png, id=576, 702.625pt x 668.4975pt>
+File: imgs/axonometrie1.png Graphic file (type png)
+
+<use imgs/axonometrie1.png>
+Package pdftex.def Info: imgs/axonometrie1.png used on input line 903.
+(pdftex.def)             Requested size: 298.75264pt x 284.24538pt.
+ [130 <./imgs/zentralprojektion.png> <./imgs/paralellprojektion.png>] [131 <./i
+mgs/axonometrie1.png>]
+<imgs/axonometrie2.png, id=586, 702.625pt x 579.16376pt>
+File: imgs/axonometrie2.png Graphic file (type png)
+
+<use imgs/axonometrie2.png>
+Package pdftex.def Info: imgs/axonometrie2.png used on input line 910.
+(pdftex.def)             Requested size: 341.43437pt x 281.45084pt.
+ [132 <./imgs/axonometrie2.png>]
+<imgs/axonometrie3.png, id=592, 702.625pt x 619.31375pt>
+File: imgs/axonometrie3.png Graphic file (type png)
+
+<use imgs/axonometrie3.png>
+Package pdftex.def Info: imgs/axonometrie3.png used on input line 916.
+(pdftex.def)             Requested size: 341.43437pt x 300.96216pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 918--921
+
+ []
+
+[133 <./imgs/axonometrie3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 951--953
+
+ []
+
+[134]
+Overfull \hbox (12.76532pt too wide) in paragraph at lines 961--962
+[]\T1/cmr/bx/n/10 Beispiel 50. []\T1/cmr/m/it/10 Kon-stru-ie-re ei-ne gros-se A
+xo-no-me-trie $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OT1/cmr/m/n/10 = 150[]\OML/
+cmm/m/it/10 ; k \OT1/cmr/m/n/10 = []$ \T1/cmr/m/it/10 des Ein-heits-wür-fels $\
+OML/cmm/m/it/10 ABCDEGH$
+ []
+
+<imgs/axonometrieBeispiel.png, id=600, 702.625pt x 498.86375pt>
+File: imgs/axonometrieBeispiel.png Graphic file (type png)
+
+<use imgs/axonometrieBeispiel.png>
+Package pdftex.def Info: imgs/axonometrieBeispiel.png used on input line 969.
+(pdftex.def)             Requested size: 341.43437pt x 242.42818pt.
+
+<imgs/R3spiegelungGrundrissebene.png, id=601, 702.625pt x 658.46pt>
+File: imgs/R3spiegelungGrundrissebene.png Graphic file (type png)
+
+<use imgs/R3spiegelungGrundrissebene.png>
+Package pdftex.def Info: imgs/R3spiegelungGrundrissebene.png used on input line
+ 990.
+(pdftex.def)             Requested size: 341.43437pt x 319.9857pt.
+ [135 <./imgs/axonometrieBeispiel.png>] [136 <./imgs/R3spiegelungGrundrissebene
+.png>]
+<imgs/R3spiegelungUrsprung.png, id=610, 702.625pt x 755.82375pt>
+File: imgs/R3spiegelungUrsprung.png Graphic file (type png)
+
+<use imgs/R3spiegelungUrsprung.png>
+Package pdftex.def Info: imgs/R3spiegelungUrsprung.png used on input line 1004.
+
+(pdftex.def)             Requested size: 341.43437pt x 367.30064pt.
+ [137 <./imgs/R3spiegelungUrsprung.png>]
+<imgs/R3spiegelungZAchse.png, id=615, 702.625pt x 459.7175pt>
+File: imgs/R3spiegelungZAchse.png Graphic file (type png)
+
+<use imgs/R3spiegelungZAchse.png>
+Package pdftex.def Info: imgs/R3spiegelungZAchse.png used on input line 1012.
+(pdftex.def)             Requested size: 341.43437pt x 223.40463pt.
+ [138 <./imgs/R3spiegelungZAchse.png>]
+<imgs/R3spiegelungGeraden1.png, id=621, 702.625pt x 476.78125pt>
+File: imgs/R3spiegelungGeraden1.png Graphic file (type png)
+
+<use imgs/R3spiegelungGeraden1.png>
+Package pdftex.def Info: imgs/R3spiegelungGeraden1.png used on input line 1030.
+
+(pdftex.def)             Requested size: 426.79135pt x 289.61392pt.
+ [139 <./imgs/R3spiegelungGeraden1.png>]
+<imgs/R3spiegelungGeraden2.png, id=627, 702.625pt x 454.69875pt>
+File: imgs/R3spiegelungGeraden2.png Graphic file (type png)
+
+<use imgs/R3spiegelungGeraden2.png>
+Package pdftex.def Info: imgs/R3spiegelungGeraden2.png used on input line 1053.
+
+(pdftex.def)             Requested size: 426.79135pt x 276.20023pt.
+
+<imgs/R3spiegelungGeraden3.png, id=628, 725.71124pt x 486.81876pt>
+File: imgs/R3spiegelungGeraden3.png Graphic file (type png)
+
+<use imgs/R3spiegelungGeraden3.png>
+Package pdftex.def Info: imgs/R3spiegelungGeraden3.png used on input line 1056.
+
+(pdftex.def)             Requested size: 426.79135pt x 286.3069pt.
+ [140 <./imgs/R3spiegelungGeraden2.png>]
+[141 <./imgs/R3spiegelungGeraden3.png>] [142]
+<imgs/spiegelungAnEbene1.png, id=640, 702.625pt x 692.5875pt>
+File: imgs/spiegelungAnEbene1.png Graphic file (type png)
+
+<use imgs/spiegelungAnEbene1.png>
+Package pdftex.def Info: imgs/spiegelungAnEbene1.png used on input line 1095.
+(pdftex.def)             Requested size: 426.79135pt x 420.70233pt.
+
+<imgs/spiegelungAnEbene2.png, id=641, 702.625pt x 402.50375pt>
+File: imgs/spiegelungAnEbene2.png Graphic file (type png)
+
+<use imgs/spiegelungAnEbene2.png>
+Package pdftex.def Info: imgs/spiegelungAnEbene2.png used on input line 1101.
+(pdftex.def)             Requested size: 426.79135pt x 244.49512pt.
+ [143 <./imgs/spiegelungAnEbene1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1131
+
+ []
+
+[144 <./imgs/spiegelungAnEbene2.png>] [145]
+<imgs/drehungUmUrsprung1.png, id=654, 702.625pt x 696.6025pt>
+File: imgs/drehungUmUrsprung1.png Graphic file (type png)
+
+<use imgs/drehungUmUrsprung1.png>
+Package pdftex.def Info: imgs/drehungUmUrsprung1.png used on input line 1153.
+(pdftex.def)             Requested size: 426.79135pt x 423.14119pt.
+
+<imgs/drehungUmUrsprung2.png, id=655, 702.625pt x 693.59125pt>
+File: imgs/drehungUmUrsprung2.png Graphic file (type png)
+
+<use imgs/drehungUmUrsprung2.png>
+Package pdftex.def Info: imgs/drehungUmUrsprung2.png used on input line 1158.
+(pdftex.def)             Requested size: 426.79135pt x 421.31204pt.
+ [146 <./imgs/drehungUmUrsprung1.png>]
+[147 <./imgs/drehungUmUrsprung2.png>] [148]
+<imgs/drehungMitWinkel1.png, id=667, 702.625pt x 515.9275pt>
+File: imgs/drehungMitWinkel1.png Graphic file (type png)
+
+<use imgs/drehungMitWinkel1.png>
+Package pdftex.def Info: imgs/drehungMitWinkel1.png used on input line 1198.
+(pdftex.def)             Requested size: 341.43437pt x 250.72049pt.
+
+<imgs/drehungMitWinkel2.png, id=668, 702.625pt x 632.3625pt>
+File: imgs/drehungMitWinkel2.png Graphic file (type png)
+
+<use imgs/drehungMitWinkel2.png>
+Package pdftex.def Info: imgs/drehungMitWinkel2.png used on input line 1201.
+(pdftex.def)             Requested size: 341.43437pt x 307.30333pt.
+ [149 <./imgs/drehungMitWinkel1.png>] [150 <./imgs/drehungMitWinkel2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1225--1227
+
+ []
+
+[151]
+<imgs/drehungUmKoordinatenachseAllgemein.png, id=682, 702.625pt x 503.8825pt>
+File: imgs/drehungUmKoordinatenachseAllgemein.png Graphic file (type png)
+
+<use imgs/drehungUmKoordinatenachseAllgemein.png>
+Package pdftex.def Info: imgs/drehungUmKoordinatenachseAllgemein.png used on in
+put line 1240.
+(pdftex.def)             Requested size: 341.43437pt x 244.8671pt.
+
+<imgs/drehungUmKoordinatenachseX.png, id=683, 702.625pt x 466.74374pt>
+File: imgs/drehungUmKoordinatenachseX.png Graphic file (type png)
+
+<use imgs/drehungUmKoordinatenachseX.png>
+Package pdftex.def Info: imgs/drehungUmKoordinatenachseX.png used on input line
+ 1244.
+(pdftex.def)             Requested size: 341.43437pt x 226.81912pt.
+ [152 <./imgs/drehungUmKoordinatenachseAllgemein.png> <./imgs/drehungUmKoordina
+tenachseX.png>]
+<imgs/drehungUmKoordinatenachseY.png, id=689, 702.625pt x 366.36874pt>
+File: imgs/drehungUmKoordinatenachseY.png Graphic file (type png)
+
+<use imgs/drehungUmKoordinatenachseY.png>
+Package pdftex.def Info: imgs/drehungUmKoordinatenachseY.png used on input line
+ 1267.
+(pdftex.def)             Requested size: 341.43437pt x 178.04082pt.
+ [153 <./imgs/drehungUmKoordinatenachseY.png>] [154] [155] [156] [157] [158]
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1522
+
+ []
+
+[159]
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1579
+
+ []
+
+[160]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1633--1637
+
+ []
+
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1679--1684
+
+ []
+
+[161]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [162] <imgs/ebenenbueschel.png, id=723, 84.315pt x 74.679pt>
+File: imgs/ebenenbueschel.png Graphic file (type png)
+
+<use imgs/ebenenbueschel.png>
+Package pdftex.def Info: imgs/ebenenbueschel.png used on input line 1771.
+(pdftex.def)             Requested size: 341.43437pt x 302.42088pt.
+ [163]
+Underfull \hbox (badness 10000) in paragraph at lines 1782--1791
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1782--1791
+
+ []
+
+[164 <./imgs/ebenenbueschel.png>]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [165] [166]
+Underfull \hbox (badness 10000) in paragraph at lines 1903--1906
+
+ []
+
+[167] [168]
+Underfull \hbox (badness 10000) in paragraph at lines 1979--1983
+
+ []
+
+[169]
+Underfull \hbox (badness 10000) in paragraph at lines 2042--2046
+
+ []
+
+[170] [171]
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2100
+
+ []
+
+[172]
+Kapitel 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2179--2181
+
+ []
+
+[173
+
+] <imgs/komplexeZahlBestimmt.png, id=759, 168.63pt x 101.178pt>
+File: imgs/komplexeZahlBestimmt.png Graphic file (type png)
+
+<use imgs/komplexeZahlBestimmt.png>
+Package pdftex.def Info: imgs/komplexeZahlBestimmt.png used on input line 2183.
+
+(pdftex.def)             Requested size: 341.43437pt x 204.86575pt.
+
+<imgs/gaussZahlenebene.png, id=760, 168.63pt x 152.0079pt>
+File: imgs/gaussZahlenebene.png Graphic file (type png)
+
+<use imgs/gaussZahlenebene.png>
+Package pdftex.def Info: imgs/gaussZahlenebene.png used on input line 2187.
+(pdftex.def)             Requested size: 341.43437pt x 307.78647pt.
+ [174 <./imgs/komplexeZahlBestimmt.png> <./imgs/gaussZahlenebene.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2227--2231
+
+ []
+
+[175] [176] <imgs/komplexeZahlenAufgabe4.png, id=773, 84.315pt x 73.35405pt>
+File: imgs/komplexeZahlenAufgabe4.png Graphic file (type png)
+
+<use imgs/komplexeZahlenAufgabe4.png>
+Package pdftex.def Info: imgs/komplexeZahlenAufgabe4.png used on input line 227
+4.
+(pdftex.def)             Requested size: 341.43437pt x 297.05539pt.
+ [177 <./imgs/komplexeZahlenAufgabe4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2301--2303
+
+ []
+
+[178] [179]
+Underfull \hbox (badness 10000) in paragraph at lines 2353--2356
+
+ []
+
+<imgs/polarform.png, id=784, 159.4758pt x 134.904pt>
+File: imgs/polarform.png Graphic file (type png)
+ <use imgs/polarform.png>
+Package pdftex.def Info: imgs/polarform.png used on input line 2382.
+(pdftex.def)             Requested size: 341.43437pt x 288.83786pt.
+
+[180] [181 <./imgs/polarform.png>] [182] [183]
+Kapitel 7.
+[184
+
+]
+Kapitel 8.
+<imgs/griechisches_alphabet.png, id=802, 483.8075pt x 370.38374pt>
+File: imgs/griechisches_alphabet.png Graphic file (type png)
+
+<use imgs/griechisches_alphabet.png>
+Package pdftex.def Info: imgs/griechisches_alphabet.png used on input line 2495
+.
+(pdftex.def)             Requested size: 341.43437pt x 261.39749pt.
+
+<imgs/polyeder.png, id=803, 903.375pt x 1288.815pt>
+File: imgs/polyeder.png Graphic file (type png)
+ <use imgs/polyeder.png>
+Package pdftex.def Info: imgs/polyeder.png used on input line 2499.
+(pdftex.def)             Requested size: 426.79135pt x 608.88966pt.
+
+[185
+
+ <./imgs/griechisches_alphabet.png>]
+Overfull \vbox (41.05913pt too high) has occurred while \output is active []
+
+
+[186 <./imgs/polyeder.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2509--2509
+[]|\T1/cmr/m/n/10 nicht de-fi-
+ []
+
+[187] (./Lineare Algebra.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14650 strings out of 493315
+ 264585 string characters out of 6137904
+ 321021 words of memory out of 5000000
+ 17654 multiletter control sequences out of 15000+600000
+ 24534 words of font info for 64 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 56i,20n,71p,435b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on "Lineare Algebra.pdf" (188 pages, 27489281 bytes).
+PDF statistics:
+ 902 PDF objects out of 1000 (max. 8388607)
+ 496 compressed objects within 5 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 513 words of extra memory for PDF output out of 10000 (max. 10000000)
+

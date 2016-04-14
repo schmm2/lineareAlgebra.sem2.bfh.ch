@@ -1,0 +1,2514 @@
+\documentclass[a4paper,10pt]{report}
+
+% Package import
+\usepackage[a4paper,inner=3.5cm,outer=2.5cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{epstopdf}
+
+\usepackage{
+} %Type1-Schriftart für nicht-englische Texte
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+% For Rule of Sarrus Drawings
+\usepackage{tikz}
+\usetikzlibrary{calc,matrix}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{framed}
+
+\usepackage{blkarray}
+\usepackage{pdfpages}
+% Example
+\usepackage{gb4e}
+\noautomath
+
+\newtheorem{mydef}{Definition}
+\newtheorem{myexample}{Beispiel}
+\newtheorem{myproof}{Beweis}
+\newtheorem{axiom}{Axiom}
+
+% Mathbox
+\newenvironment{mathbox}
+{\par\smallskip\centering\begin{lrbox}{0}%
+\begin{minipage}[c]{\textwidth}}
+{\end{minipage}\end{lrbox}%
+\framebox[\textwidth]{\usebox{0}}%
+\par\medskip
+\ignorespacesafterend}
+
+% sets of numbers
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\C}{{\mathbb C}}
+
+% imaginary unit
+\newcommand{\iu}{{i\mkern1mu}}
+
+
+%% Zeilenabstand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{setspace}
+%\singlespacing        %% 1-zeilig (Standard)
+%\onehalfspacing       %% 1,5-zeilig
+%\doublespacing        %% 2-zeilig
+
+
+\begin{document}
+
+\pagestyle{empty} %%Keine Kopf-/Fusszeilen auf den ersten Seiten.
+
+%% Die einfache Version:
+\title{Lineare Algebra}
+\author{Kevin Häni \& Martin Schmidli}
+%\date{} %%Wenn kommentiert, wird das aktuelle Datum verwendet.
+\maketitle
+
+
+%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents %Inhaltsverzeichnis
+\cleardoublepage %Das erste Kapitel soll auf einer ungeraden Seite beginnen.
+
+\pagestyle{plain} %%Ab hier die Kopf-/Fusszeilen: headings / fancy / ...
+
+%% Kapitel / Hauptteil des Dokumentes %%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------- Vektoren --------------
+\input{Vektorgeometrie.tex}
+\chapter{Abbildungen, Matrizen}
+\section{Abbildungen $R^2 \to R^2$}
+\begin{enumerate}
+	\item{\underline{Translation (Parallelverschiebung)}}
+	\\ mit Vektor $\vec{t}$\\
+	\begin{center}
+		 \includegraphics[width=0.7\textwidth]{imgs/abbildungen_translation.png}
+	\end{center}
+	Ist
+	\begin{eqnarray*}
+		\vec{t} = \frac{t_1}{t_2}
+		\shortintertext{so ist}
+		x' = x + t_1\\
+		y' = y + t_2
+	\end{eqnarray*}
+	\newpage
+	\item \label{itm:spiegelungXAchseBeispiel} \underline{Spiegelung an der x-Achse}\\ 
+	\begin{center}
+	 	\includegraphics[width=0.7\textwidth]{imgs/abbildungen_spiegelung_xAchse.png}
+	\end{center}
+	\begin{eqnarray*}
+		x' = x\\
+		y' = y
+	\end{eqnarray*}
+	\newpage
+	\item \label{itm:spiegelungUrsprungBeispiel}
+	\underline{Punktspiegelung (Zentralsymmetrie) an $z(a/b)$}\\
+	\begin{center}
+	 	\includegraphics[width=0.8\textwidth]{imgs/abbildungen_punktSpiegelung.png}
+	\end{center}
+	Es ist der Vektor von 
+	\begin{eqnarray*}
+		\vec{ZP'} = \vec{PZ}
+		\shortintertext{also}
+		\begin{pmatrix}x' -a\\y' -b\end{pmatrix} = \begin{pmatrix}a - x\\b - y\end{pmatrix}
+		\shortintertext{komponentenweise}
+		x' - a = a -x\\
+		x' = 2a -x\\
+		y' -b = b-y\\
+		y' = 2b -y
+	\end{eqnarray*}
+	\newpage
+	\item \label{itm:rotationBeispiel}
+	\underline{Rotation um den Ursprung mit Winkel $\alpha$}\\
+	\begin{center}
+	 	\includegraphics[width=0.8\textwidth]{imgs/abbildungen_rotation.png}
+	\end{center}
+	Wir drehen die Basis um den Ursprung und erhalten so die neue Basis
+	\begin{eqnarray*}
+		\vec{d_1} = \begin{pmatrix}\cos(\alpha)\\ \sin(\alpha)\end{pmatrix}, \vec{d_2} = \begin{pmatrix}-y\\x\end{pmatrix}
+		\shortintertext{also}
+		\vec{d_2} = \begin{pmatrix}- \sin(\alpha)\\ \cos(\alpha)\end{pmatrix}
+		\shortintertext{ist}
+		P(x_p/y_p)
+		\shortintertext{so ist bekanntlich}
+		\vec{p} = x_p\vec{e_1} + y_p\vec{e_2}
+		\shortintertext{und so}
+		\vec{p'} = x_p\vec{d_1} + y_p\vec{d_2}\\
+		= x_p\begin{pmatrix}\cos{\alpha}\\\sin{\alpha}\end{pmatrix} + y_p\begin{pmatrix}-\sin{\alpha}\\\cos{\alpha}\end{pmatrix} \\
+		\vec{p'} = \begin{pmatrix}x_p\cos(\alpha) - y_p\sin(\alpha)\\x_p\sin(\alpha) + y_p\cos(\alpha)\end{pmatrix}
+	\end{eqnarray*}
+	komponentenweise (ohne Index)
+	\begin{mathbox}
+		\begin{eqnarray*}
+			x' = x\cos(\alpha) - y\sin(\alpha)\\
+			y' = x\sin(\alpha) + y\cos(\alpha)\\
+		\end{eqnarray*}
+	\end{mathbox}
+	\vspace{0.5cm}
+	\underline{Spiegelung an der Geraden $y = x \tan \gamma$}\\
+	\\
+	Die Spiegelungsmatrix lautet
+	\begin{eqnarray*}
+		S =
+		\begin{pmatrix}
+			\cos 2 \gamma & \sin 2 \gamma\\
+			\sin 2 \gamma & -\cos 2 \gamma
+		\end{pmatrix}
+	\end{eqnarray*}
+	\newpage
+	\item
+	\underline{Zentrische Streckung (Dilatation) am Zentrum $Z(a/b)$ mit Streckfaktor $k$}\\
+	\begin{center}
+	 	\includegraphics[width=0.8\textwidth]{imgs/abbildungen_zentrischeStreckung.png}
+	\end{center}
+	Es ist\\
+	\begin{eqnarray*}
+		\vec{ZA'} = k\vec{ZA}
+		\shortintertext{Mit}
+		A(x/y)\text{ und }A'(x'/y')
+		\shortintertext{wird}
+		\vec{a'} -\vec{z} = k(\vec{a}-\vec{z})\\
+		\vec{a'} = k\vec{a} + k\vec{z} + \vec{z}\\
+		\vec{a'} = k\vec{a} + \vec{z}(1-k)
+		\shortintertext{also} 
+		\begin{pmatrix}x'\\y'\end{pmatrix} = k\begin{pmatrix}x\\y\end{pmatrix} + (1-k)\begin{pmatrix}a\\b\end{pmatrix}
+	\end{eqnarray*}
+	\begin{mathbox}
+		\begin{eqnarray*}
+			x' = kx + (1-k)a\\
+			y' = ky + (1-k)b\\
+			k \not = 0\\
+		\end{eqnarray*}
+	\end{mathbox}
+\end{enumerate}\clearpage
+\section{Lineare Abbildungen}
+Alle unsere Abbildungen haben eine Vorschrift der Form
+\begin{eqnarray*}
+	x' = ax + by + c\\
+	y' = dx + ey + f
+\end{eqnarray*}
+\begin{mydef}
+	Eine Abbildung von $R^2$ im $R^2$ heisst linear, wenn
+	\begin{eqnarray*}
+		x' = ax + by\\
+		y' = cx + dy\\
+		a,b,c,d \in \mathbb{R}
+	\end{eqnarray*}
+	Die Abbildungsvorschrift ist.
+\end{mydef}
+\begin{myexample}
+	Rotation, Spiegelung am Ursprung, Spiegelung an der x-Achse sind lineare Abbildungen.
+\end{myexample}
+Ist die Abbildung linear, so genügt es also, wenn wir die 4 Zahlen $a,b,c$ und $d$ benennen um die Vorschrift zu finden.
+\begin{mydef}
+	Eine \underline{(m,n)-Matrix} besteht aus m Zeilen und n Spalten.
+	\begin{equation*}
+		M = \begin{pmatrix}
+				a_{11} & a_{12}& a_{13} & \ldots & a_{1n}\\
+				a_{21} &a_{22} & a{23}  & \ldots  & a_{2n}\\
+				\vdots & & & & \vdots\\
+				a_{m1} & a_{m2} & a_{m3} & \ldots & a_{mn}
+			\end{pmatrix}
+	\end{equation*}
+	wobei $a_{ij}$ das \underline{Element} in der i. Zeile und j. Spalte bezeichnet.\\
+\end{mydef}
+\noindent
+Lineare Abbildungen können also mit einer Matrix beschreiben werden.\\
+\\
+Zum Beispiel \ref{spiegelungXAchseBeispiel}\\
+Matrix Spiegelung an der x-Achse
+\begin{equation*}
+	S = \begin{pmatrix}1& 0 \\ 0 & -1\end{pmatrix}
+\end{equation*}
+Zum Beispiel \ref{spiegelungUrsprungBeispiel}\\
+Matrix Spiegelung am Ursprung
+\begin{equation*}
+	A = \begin{pmatrix}-1& 0 \\ 0 & -1\end{pmatrix}
+\end{equation*}
+Zum Beispiel \ref{rotationBeispiel}\
+Rotationsmatrix
+\begin{equation*}
+	R = \begin{pmatrix}\cos(\alpha)& -\sin(\alpha) \\ \sin(\alpha) & \cos(\alpha)\end{pmatrix}
+\end{equation*}
+auch Matrizen sind Matrizen, so ist 
+\begin{myexample}
+	\begin{equation*}
+		\vec{a} = \begin{pmatrix}4\\1\\7\end{pmatrix}
+	\end{equation*}
+	eine $(3,1)$ - Matrix
+\end{myexample}
+\noindent
+Wir können eine Matrix
+\begin{equation*}
+	M = \begin{pmatrix}2 & 3\\ 1 & 5\end{pmatrix}
+\end{equation*}
+Mit einem Vektor 
+\begin{equation*}
+	\vec{a} = \begin{pmatrix}4\\7\end{pmatrix}
+\end{equation*}
+multiplizieren, aber nicht umgekehrt.\\
+\\
+Wir haben Abbildungen mit
+\begin{eqnarray*}
+	x' = a_{11}x + a_{12}y\\
+	y' = a_{21}x + a_{22}y
+\end{eqnarray*}
+dargestellt. Das ist gleichbedeutend mit
+\begin{equation*}
+	\begin{pmatrix}x'\\y'\end{pmatrix} = \begin{pmatrix}a_{11}x + a_{12}y\\a_{21}x + a_{22}y\end{pmatrix}
+\end{equation*}
+\begin{mydef}
+	\begin{eqnarray*}
+		\begin{pmatrix}x'\\y'\end{pmatrix} = \begin{pmatrix}a_{11} & a_{12}\\a_{21} & a_{22}\end{pmatrix}  \begin{pmatrix}x\\y\end{pmatrix}
+		\shortintertext{kurz}
+		\vec{p'} = M * \vec{p}
+	\end{eqnarray*}
+\end{mydef}
+\begin{myexample}
+	\begin{eqnarray*}
+		\vec{p'} &=&  \begin{pmatrix}2 & 3\\ 1 & 5\end{pmatrix} *  \begin{pmatrix}4\\7\end{pmatrix}\\
+		\begin{pmatrix}x'\\y'\end{pmatrix} &=& \begin{pmatrix}2 & 3\\1 & 5\end{pmatrix} * \begin{pmatrix}4\\7\end{pmatrix}\\
+		&=& \begin{pmatrix}2*4 + 3*7\\ 1 *4 + 5*7\end{pmatrix}\\
+		&=&\begin{pmatrix}29\\39\end{pmatrix}\\
+	\end{eqnarray*}
+\end{myexample}
+\begin{myexample}
+	Drehe $P(6/4)$ mit $\alpha = 120^\circ$ um den Ursprung\\
+	Rotationsmatrix\\
+	\begin{eqnarray*}
+		R &=& \begin{pmatrix}\cos(\alpha)& -\sin(\alpha) \\ \sin(\alpha) & \cos(\alpha)\end{pmatrix}\\
+		&=& \begin{pmatrix}-\frac{1}{2} & -\frac{\sqrt{3}}{2}\\ \frac{\sqrt{3}}{2}& -\frac{1}{2}\end{pmatrix}
+		\shortintertext{und so}
+		\begin{pmatrix}x'\\y'\end{pmatrix} &=& \begin{pmatrix}-\frac{1}{2} & -\frac{\sqrt{3}}{2}\\ \frac{\sqrt{3}}{2}& -\frac{1}{2}\end{pmatrix} * \begin{pmatrix}6\\4\end{pmatrix}\\
+		&=& \begin{pmatrix}-\frac{1}{2} * 6 & -\frac{\sqrt{3}}{2} * 4\\ \frac{\sqrt{3}}{2} * 6 & -\frac{1}{2} * 4\end{pmatrix}\\
+		&& \to P'(-3-2\sqrt{3}/2-3\sqrt{3})
+	\end{eqnarray*}
+\end{myexample}
+\begin{mydef}
+	Eine \underline{(m,m)-Matrix} heisst \underline{quadratisch}\\
+	\begin{center}
+	 	\includegraphics[width=0.4\textwidth]{imgs/mmMatrix.png}
+	\end{center}
+	und $a_{11}, a_{22}, a_{33}, \ldots, a_{mm}$ heisst \underline{Hauptdiagonale}.\\
+	\\
+	Die Matrix
+	\begin{equation*}
+		N = \begin{pmatrix}0  & \ldots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \ldots & 0\end{pmatrix} =  \begin{pmatrix}0\end{pmatrix} 
+	\end{equation*}
+	heisst \underline{Nullmatrix}.\\
+	\\
+	Die Matrix
+	\begin{equation*}
+		N = \begin{pmatrix}1 & 0 & 0 & \ldots & 0 \\ 0 & 1 & 0 &\dots &0  \\ 0 & 0 & 1 & \ldots & 0\\ \vdots&\vdots&\vdots&\ddots& \vdots \\ 0 & 0 & 0 & \ldots & 1\end{pmatrix} 
+	\end{equation*}
+	heisst \underline{Einheitsmatrix}.\\
+	In der Einheitsmatrix sind nur 1en auf der Hauptdiagonalen.
+\end{mydef}
+\newpage
+\section{Operationen mit Matrizen}
+\begin{mydef}
+	Sind A und B zwei (m,n) Matrizen, so  ist 
+	\begin{equation*}
+		A+B : = \begin{pmatrix}a_{11}+b_{11}&a_{12}+b_{12}& \ldots& a_{1n}+b_{1n}\\ a_{21}+b_{21}& a_{22}+b_{22} &\ldots& \vdots\\\vdots&&&\vdots&\\a_{m1}+b_{m1}& a_{m2}+b_{22}&\ldots&a_{mn}+b_{mn}\end{pmatrix}
+	\end{equation*}
+\end{mydef}
+\begin{myexample}
+	\begin{enumerate}
+	\item
+	\begin{eqnarray*}
+		A = \begin{pmatrix}4&5&6\\1&2&4\end{pmatrix}, B = \begin{pmatrix}3&1\\5&7\end{pmatrix}
+	\end{eqnarray*}
+	A + B ist nicht definiert, da A eine 3 und B eine 2 Spaltige Matrix ist.
+	\item
+	\begin{eqnarray*}
+		A = \begin{pmatrix}3&3\\5&1\end{pmatrix}, B = \begin{pmatrix}7&2\\3&4\end{pmatrix}\\
+		A+B = \begin{pmatrix}10&5\\8&5\end{pmatrix}
+	\end{eqnarray*}
+	\item
+	Ist N die Nullmatrix, so ist
+	\begin{equation*}\forall (A+N = N+A=A)\end{equation*}
+	\end{enumerate}
+\end{myexample}
+\begin{mydef}
+	Ist
+	\begin{eqnarray*}
+	\lambda \in  \mathbb{R}
+	\shortintertext{so ist}
+	\lambda A: = \begin{pmatrix}\lambda a_{11}& \lambda a_{12} & \ldots& \lambda a_{1n}\\
+	\lambda a_{21} &\lambda a_{22}& \ldots & \vdots\\ 
+	\vdots&&&\vdots\\ 
+	\lambda a_{m1} & \lambda a_{m2} & \ldots & \lambda a_{mn} \end{pmatrix}
+	\end{eqnarray*}
+	Die Multiplikation einer Matrix mit einem Skalar $\lambda$\\
+	\\
+	Es ist 
+	\begin{equation*}(-1)A = -A\end{equation*}
+	die zu A \underline{inverse} Matrix.\\
+	Dann ist
+	\begin{equation*}\forall A(A+(-A) = (-A)+ A = N)\end{equation*}
+\end{mydef}
+\noindent
+Für die Multiplikation betrachten wir $\vec{p'} = A\vec{p}$ und bilden $\vec{p'}$ mit der Matrix B erneut ab.\\
+\begin{center}
+	 	\includegraphics[width=0.8\textwidth]{imgs/multiplikation_Matrizen.png}
+	\end{center}
+\begin{eqnarray*}
+	\vec{p'} = A \vec{p}\\
+	\vec{p''} = B \vec{p'}
+	\shortintertext{also ist}
+	\vec{p''} = B(A\vec{p})
+\end{eqnarray*}
+Wir haben also die beiden Abbildungen \underline{verkettet}. Mit den Funktionen f mit
+\begin{eqnarray*}
+	y = f(x)
+	\shortintertext{und g mit}
+	y = g(x)
+	\shortintertext{erhalten wir so}
+\end{eqnarray*}
+\begin{mathbox}
+	\begin{equation*}
+		y = g(f(x)) : = (g \circ f)(x)
+	\end{equation*}
+\end{mathbox}
+''g ring f'' ist die \underline{komposition} (Verkettung)von f mit g.\\
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/verkettungFunktionen.png}
+\end{center}
+\newpage
+\begin{myexample}
+	\begin{enumerate}
+		\item
+		\begin{eqnarray*}
+			f(x) = \sin(x), g(x) = x^2\\
+			\\
+			g \circ f\\
+			\to g(f(x)) = (\sin(x))^2 = \sin^2(x)
+			\shortintertext{und}
+			f \circ g\\
+			f(g(x)) = \sin(x^2)
+			\shortintertext{also}
+		\end{eqnarray*}
+		\begin{mathbox}
+			\begin{equation*}
+				f \circ g \not = g \circ f
+			\end{equation*}
+		\end{mathbox}
+		\item
+		\begin{eqnarray*}
+			f(x) = (x^2 + 3)^2), g(x) = e^x\\
+			\\
+			g \circ f\\
+			\to g(f(x)) = e^{(x^2+3)^2} \\
+			= e^{x^2 +6x^2+9}
+			\shortintertext{und}
+			f \circ g\\
+			f(g(x)) = (e^x)^2 +3)^2\\
+			= (e^2+3)^2\\
+			= (e^{2x}+3)^2\\
+			= e^{4x}+ 6e^{2x}+9
+		\end{eqnarray*}
+		\newpage
+		\item
+		Spiegelung an Achse a und dann Speigelung an Achse b\\
+		\begin{center}
+	 		\includegraphics[width=0.8\textwidth]{imgs/doppelteSpiegelung.png}
+		\end{center}
+		kann durch eine Rotation mit y um $S = a \cap b$ ersetzt werden. Dabei ist $p = 2\sphericalangle(a,b)$.
+	\end{enumerate}
+\end{myexample}
+\newpage
+\noindent
+Bei den Abbildungen ist also
+\begin{eqnarray*}
+	\vec{p''} = B(A\vec{p})
+	\shortintertext{und wir definieren}
+	B(A\vec{p}): = (BA)\vec{p}
+\end{eqnarray*}
+Ist
+\begin{eqnarray*}
+	A = \begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix}, B = \begin{pmatrix}b_{11}&b_{12}\\b_{21}&b_{22}\end{pmatrix}\\
+	\vec{p}= \begin{pmatrix}x\\y\end{pmatrix}, \vec{p'} = \begin{pmatrix}x'\\y'\end{pmatrix}, \vec{p''} = \begin{pmatrix}x''\\y''\end{pmatrix}
+	\shortintertext{so ist}
+	\vec{p'} = A\vec{p} = \begin{pmatrix}a_{11}x&a_{12}y\\a_{21}x&a_{22}y\end{pmatrix}
+	\shortintertext{und}
+	\vec{p''} = B\vec{p'} = \begin{pmatrix}b_{11}x'&b_{12}y'\\b_{21}x'&b_{22}y'\end{pmatrix}
+	\shortintertext{also}
+	\begin{pmatrix}x''\\y''\end{pmatrix} = 
+	\begin{pmatrix}
+		b_{11}(a_{11}x + a_{12}y) + b_{12}(a_{21}x+a_{22}y\\
+		b_{21}(a_{11}x + a_{12}y) + b_{22}(a_{21}x+a_{22}y
+	\end{pmatrix}\\
+	= \begin{pmatrix}
+		(b_{11}a_{11}+ b_{12}a_{21})x+ (b_{11}a_{12} + b_{12}a_{22})y\\
+		(b_{21}a_{11}+ b_{22}a_{21})x+ (b_{21}a_{12} + b_{22}a_{22})y
+	\end{pmatrix}
+	\shortintertext{Also ist}
+	BA = \begin{pmatrix}b_{11}&b_{12}\\b_{21}&b_{22}\end{pmatrix}\begin{pmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{pmatrix} = \begin{pmatrix}
+		b_{11}a_{11}+ b_{12}a_{21} & b_{11}a_{12} + b_{12}a_{22}\\
+		b_{21}a_{11}+ b_{22}a_{21} & b_{21}a_{12} + b_{22}a_{22}
+	\end{pmatrix}
+\end{eqnarray*}
+\begin{myexample}
+	\begin{enumerate}
+		\item
+		\begin{eqnarray*}
+			\begin{pmatrix}2&3\\1&4\end{pmatrix}\begin{pmatrix}1&3\\5&1\end{pmatrix} = \begin{pmatrix}2*1 +3*5 & 2*3+3*1\\1*1+4*5&1*3+4*1\end{pmatrix}\\
+			= \begin{pmatrix}17&9\\21&7\end{pmatrix}
+		\end{eqnarray*}
+		\item
+		\begin{eqnarray*}
+			\begin{pmatrix}1&4\\3&2\end{pmatrix}\begin{pmatrix}2&3\\1&4\end{pmatrix} = \begin{pmatrix}6&19\\8&17\end{pmatrix}= \begin{pmatrix}c_{11}&c_{12}\\c_{21}&c_{22}\end{pmatrix} 
+		\end{eqnarray*}
+	\end{enumerate}
+\end{myexample}
+\noindent
+Um $c_{ij}$ zu erhalten, müssen wir die i. Zeile mit der j. Spalte skalar multiplizieren.\\
+Und wir sehen, dass
+\begin{mathbox}
+	\begin{equation*}
+		AB \not = BA
+	\end{equation*}
+	Wir müssen die Reihenfolge er Abbildung beachten: Zuerst drehen und dann spiegeln ist nicht dasselbe, wie zuerst spiegeln und dann drehen!
+\end{mathbox}
+\begin{myexample}
+	Welche Matrix gehört zu derjenigen Abbildung, bei der die Punkte zuerst mit $210^{\circ}$ um den Ursprung und dann noch an der y-Achse gespiegelt werden?\\
+	\\
+	Rotationsmatrix 
+	\begin{eqnarray*}
+		R = \begin{pmatrix}\cos(210^{\circ})&-\sin(210^{\circ})\\ \sin(210^{\circ}) & \cos(210^{\circ})\end{pmatrix}\\
+		\shortintertext{Spiegelung an der y Achse}
+		S =  \begin{pmatrix}-1&0\\0&1\end{pmatrix}
+		\shortintertext{Beachten Sie die Reihenfolge. Zuerst rotieren, dann spiegeln}
+		M = SR\text{| Wir schreiben den Ablauf von Rechts nach Links auf}\\
+		= \begin{pmatrix}-1& 0\\0&1\end{pmatrix}\begin{pmatrix}-\frac{\sqrt{3}}{2}& \frac{1}{2}\\-\frac{1}{2}&-\frac{\sqrt{3}}{2}\end{pmatrix}\\
+		= \begin{pmatrix}\frac{\sqrt{3}}{2}&-\frac{1}{2}\\-\frac{1}{2}&-\frac{\sqrt{3}}{2}\end{pmatrix}
+	\end{eqnarray*}
+\end{myexample}
+\newpage
+Fehlende SEITE!
+\newpage
+Aber
+\begin{eqnarray*}
+	BA = \begin{pmatrix}2&1\\1&3\end{pmatrix}\begin{pmatrix}1&2&3\\4&5&6\end{pmatrix}\\
+	= \begin{pmatrix}6&9&12\\13&17&21\end{pmatrix}
+\end{eqnarray*}
+Ist möglich.
+\newpage
+\begin{itemize}
+\item
+	Ist die Matrizenmultiplikation assoziativ?
+	\begin{equation*}\forall A,B,C((AB)C = A(BC))\end{equation*}
+	Ja, denn die Verkettung von Abbildungen ist assoziativ:\\
+	\begin{center}
+	 	\includegraphics[width=0.8\textwidth]{imgs/MatrizenAssoziativ.png}
+	\end{center}
+	also
+	\begin{equation*}
+		(n \circ g)f = h \circ (g\circ f)\\
+	\end{equation*}
+\item
+	Gibt es ein neutrales Element?
+	\begin{equation*}
+		\forall A \exists N(AN = NA =A)
+	\end{equation*}
+	Die Abbildung zur Matrix $N$ muss also die Punkte auf sich selbst abbilden:
+	\begin{eqnarray*}
+		x' = x\\
+		y' = y
+	\end{eqnarray*}
+	Diese Abbildung heisst \underline{Identität} (identische Abbildung) und die Matrix ist dann
+	\begin{equation*}
+		N = \begin{pmatrix}1&0\\0&1\end{pmatrix}
+	\end{equation*}
+	die \underline{Einheitsmatrix E}
+\item
+	Gibt es zu jeder Matrix eine Inverse?
+	\begin{equation*}\forall A \exists A^{-1}(AA^{-1}= A^{-1}A = E)\end{equation*}
+	Das bedeutet also, dass $A^{-1}$ dijenige Matrix ist, die zur Umkehrabbbildung (Umkehrfunktion) gehört, da ja die Verkettung von $a$ und $a^{-1}$ die Identität ergeben soll.\\
+	\begin{center}
+	 	\includegraphics[width=0.8\textwidth]{imgs/Umkehrabbildung.png}
+	\end{center}
+	Ist
+	\begin{eqnarray*}
+		A = \begin{pmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}
+		\shortintertext{so wird}
+		x' = a_{11}x + a_{12}y\\
+		y' = a_{21}x + a_{22}y
+	\end{eqnarray*}
+	Und wir suchen $P(x/y)$, müssen also das Gleichungssystem nach x und y auflösen.\\
+	Es ist
+	\begin{eqnarray*}
+		x = \frac{D_x}{D}, y = \frac{D_y}{D}
+		\shortintertext{und}
+		D = \begin{vmatrix}a_{11}& a_{12}\\a_{21} & a_{22}\end{vmatrix} = a_{11}a_{22} -a{12}a_{21}
+	\end{eqnarray*}
+\end{itemize}
+\newpage
+\begin{mydef}
+	Wir nennen
+	\begin{eqnarray*}
+		Det(A): =  a_{11}a_{22} -a_{12}a_{21}
+		\shortintertext{die \underline{zur Matrix}}
+		A = \begin{pmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}
+		\shortintertext{\underline{gehörende Determinante}}
+		\shortintertext{weiter ist}
+		D_x =  \begin{vmatrix}x'& a_{12}\\y' & a_{22}\end{vmatrix}  = a_{22}x' -a_{12}y'
+		\shortintertext{und}
+		D_y =  \begin{vmatrix}a_{11}& x'\\a_{21} &y'\end{vmatrix}  = a_{11}x' -a_{21}y'
+		\shortintertext{Damit wird}
+		x = \frac{a_{22}x'-a_{12}y'}{Det(A)} = \frac{a_{22}x'}{Det(A)} -  \frac{a_{12}y'}{Det(A)}
+		\shortintertext{Damit wird}
+		y = \frac{a_{11}x'-a_{21}y'}{Det(A)} = -\frac{a_{21}x'}{Det(A)}+  \frac{a_{11}y'}{Det(A)}
+		\shortintertext{so wird}
+		A^{-1} = \begin{pmatrix}\frac{a_{22}x'}{Det(A)} &-  \frac{a_{12}y'}{Det(A)}\\-\frac{a_{21}x'}{Det(A)}&\frac{a_{11}y'}{Det(A)}\end{pmatrix}
+	\end{eqnarray*}
+	\begin{mathbox}
+		\begin{equation*}A^{-1} = \frac{1}{Det(A)}\begin{pmatrix}a_{22} &- a_{12}\\-a_{21}&  a_{11}\end{pmatrix}\end{equation*}
+	\end{mathbox}
+\end{mydef}
+\begin{myexample}
+	Suche die inverse Matrix
+	\begin{enumerate}
+		\item
+			\begin{eqnarray*}
+				A = \begin{pmatrix}2&4\\-3&5\end{pmatrix}\\
+				Det(A)= \begin{vmatrix}2&4\\-3&5\end{vmatrix} \\
+				= 2*5 - (4*-3) \\
+				= 10+12\\
+				= 22
+				\shortintertext{und so}
+				A^{-1} = \frac{1}{22} * \begin{pmatrix}5&-4\\3&2\end{pmatrix}\\
+			\end{eqnarray*}
+		\item
+			\begin{eqnarray*}
+				B = \begin{pmatrix}3&-4\\6&-8\end{pmatrix}\\
+				Det(B) = \begin{vmatrix}3&-4\\6&-8\end{vmatrix} \\
+				= -24 + 24 \\
+				= 0
+				\shortintertext{also existiert $B^{-1}$ nicht}
+			\end{eqnarray*}
+		\item
+			\begin{equation*}
+				C = \begin{pmatrix}1&4&7\\2&1&8\end{pmatrix}\\
+			\end{equation*}
+			Det(C) existiert nicht!
+	\end{enumerate}
+\end{myexample}
+\begin{mydef}
+	Eine \underline{quadratische} Matrix M heisst \underline{regulär}, wenn $Det(M) \not = 0$. Andernfalls heisst sie \underline{singulär}.
+\end{mydef}
+\begin{equation*}
+	R = M_{n,n} \text{ist die Menge der regulären quadratischen Matrizen.}
+\end{equation*}
+Es ist also $<M_{(n,n)}; *>$ eine Gruppe.\\
+Sind $A,B \ldots$ reguläre Matritzen und E die Einheitsmatrix, so sind die Gleichungen lösbar.
+\begin{myexample}
+	\begin{enumerate}
+		\item
+		\begin{eqnarray*}
+			Ax= B\\
+			A^{-1}(Ax) = A^{-1}B\\
+			Ex = A^{-1}B\\
+			x = A^{-1}B
+			\shortintertext{Aber}
+			(Ax)A^{-1} = BA^{-1}\\
+			A(xA^{-1}) = BA^{-1}
+		\end{eqnarray*}
+		führt nicht zur Lösung.\\
+		Das Kommultativgesetz gilt bei Matrizen nicht.
+		\item
+		\begin{eqnarray*}
+			B(x-A) = Ax\\
+			Bx - BA = Ax\\
+			Bx - Ax = BA\\
+			x(B-A) = BA 
+			\shortintertext{Wir müssen hier auf die Seite achten wo die Multiplikation durchgeführt wird!}
+			x = BA(B-A)^{-1}
+		\end{eqnarray*}
+		\item
+		Wie heisst die inverse Matrix von $AB$?\\
+		Ist x die Matrix so muss
+		\begin{eqnarray*}
+			(AB)x = E
+			\shortintertext{gelten.}
+			\shortintertext{Also}
+			A(Bx) = E\\
+			A^{-1}A(Bx) = A^{-1}E\\
+			Bx = A^{-1}\\
+			B^{-1}(Bx) = B^{-1}A^{-1} \\
+			x = B^{-1}A^{-1}\\
+		\end{eqnarray*}
+		wir haben das inverse Element zu $AB$ gefunden.
+		\begin{mathbox}
+			\begin{equation*}
+				(AB)^{-1} = B^{-1}A^{-1}
+			\end{equation*}
+		\end{mathbox} 
+		Wichtig, auch hier gilt es auf die Reihenfolge zu achten!
+	\end{enumerate}
+\end{myexample}
+\newpage
+\noindent Gleichungssysteme wie
+\begin{eqnarray*}
+a_{11}x+a_{12}y = b_1 && \textit{$(x/y) \in \mathbb{R}^2$}\\
+a_{21}x+a_{22}y = b_2\\
+\end{eqnarray*}
+können wir mit Hilfe von Matrizen darstellen. Mit
+\begin{eqnarray*}
+A=\begin{pmatrix}a_{11} & a_{12}\\a_{21}&a_{22}\end{pmatrix}, && B=\begin{pmatrix}b_{11} & b_{12}\end{pmatrix}
+\end{eqnarray*}
+und 
+\begin{equation*}
+x=\begin{pmatrix}x\\y\end{pmatrix}
+\end{equation*}
+folgt
+\begin{equation*}
+Ax=B
+\end{equation*}
+Die Lösung $x$ lautet dann also
+\begin{eqnarray*}
+x\neq BA^{-1}\\
+x = A^{-1}B
+\end{eqnarray*}
+\begin{myexample}
+\begin{eqnarray*}
+\begin{vmatrix}2x+y=5\\x-3y=1\end{vmatrix}\\
+A=\begin{pmatrix}2&1\\1 &-3\end{pmatrix}, && B=\begin{pmatrix}5\\1\end{pmatrix}\\
+\end{eqnarray*}
+und so
+\begin{eqnarray*}
+A^{-1} &=& \frac{1}{-7}\begin{pmatrix}-3&-1\\-1&2\end{pmatrix}\\
+&=&\begin{pmatrix}\frac{3}{7}&\frac{1}{7}\\\frac{1}{7}&-\frac{3}{7}\end{pmatrix}
+\end{eqnarray*}
+Also
+\begin{eqnarray*}
+A^{-1}B &=& \begin{pmatrix}\frac{15}{7} & \frac{7}{3}\\\frac{5}{7}& -\frac{2}{7} \end{pmatrix}\\
+&=& \begin{pmatrix}\frac{18}{7}\\\frac{3}{7}\end{pmatrix}
+\end{eqnarray*}
+Also
+\begin{equation*}
+x=\frac{18}{7}, y=\frac{3}{7}
+\end{equation*}
+\end{myexample}
+\newpage
+\section{Abbildungen von Kurven}
+Suchen wir das Bild des Kreises $x^2 + y^2 = 49$. Bei der Abbildung mit Matrix
+\begin{equation*}
+M = \begin{pmatrix}3 & -1 \\ 2 & 2\end{pmatrix}
+\end{equation*}
+so ist also
+\begin{eqnarray*}
+x' = 3x-y\\
+y' = 2x+2y
+\end{eqnarray*}
+und wir suchen diejenige Kurvengleichung, die entsteht wenn $x^2 + y^2 = 49$ ist. Dazu brauchen wir $x$ und $y$ in Abhängigkeit von $x'$ und $y'$, müssen also $M^{-1}$ berechnen.
+\begin{equation*}
+M^{-1} = \frac{1}{8} \begin{pmatrix}2&1\\-2&3\end{pmatrix}
+\end{equation*}
+somit ist
+\begin{eqnarray*}
+x = \frac{1}{4}x' + \frac{1}{8} y'\\
+y = -\frac{1}{4}x' + \frac{3}{8}y'
+\end{eqnarray*}
+Eingesetzt in die Kreisgleichung, ergibt sich folgendes Bild des Kreises
+\begin{eqnarray*}
+(\frac{x'}{4}+\frac{y'}{8})^2 + (-\frac{x'}{4}+\frac{3y'}{8})^2 &=& 49\\
+\frac{1}{64}(4(x')^2 + 4x'y'+(y')^2) + \frac{1}{64}(4(x')^2)-12x'y'+9(y')^2) &=& 49\\
+8(x')^2 + 10(y')^2-8x'y' &=& 49 \cdot 64\\
+4(x')^2 + 5(y')^2 - 4x'y'-32\cdot 49 &=& 0\\
+4x'^2 + 5y'^2 - 4x'y'-1569 &=& 0
+\end{eqnarray*}
+\newpage
+Grafische Darstellung
+\begin{center}
+	 \includegraphics[width=0.7\textwidth]{imgs/AbbildungKreisgleichung.png}
+\end{center}
+\begin{eqnarray*}
+&\text{Rot: }x^2 + y^2 = 49\\
+&\text{Blau: }4x'^2 + 5y'^2 - 4x'y'-1569 = 0
+\end{eqnarray*}
+\newpage
+\section{Affine Abbildungen}
+Translation mit Vektor $\vec{t}$, Spiegelung an Punkt $Z(a/b)$ und zentrische Streckung sind keine linearen abbildungen. 
+\begin{mydef}
+Eine Abbildung $g: \mathbb{R}^2 \to \mathbb{R}^2$ mit der Vorschrift\\
+\begin{mathbox}
+\begin{eqnarray*}
+x' = ax+by+c\\
+y' = dx+ey+f\\
+a,b,c,d,e,f \in \mathbb{R}; c \neq 0 \lor f \neq 0\\
+\end{eqnarray*}
+\end{mathbox}
+\bigskip
+\noindent heisst \underline{affine Abbildung}.
+\end{mydef}
+\noindent
+Bei affinen Abbildungen können wir Matrizen nur brauchen, um einen Teil der Abbildung zu beschreiben. Mit $M = \begin{pmatrix}a&b\\d&e\end{pmatrix}$, $\vec{t}=\begin{pmatrix}c\\f\end{pmatrix}$ wird
+\begin{equation*}
+\begin{pmatrix}x'\\y'\end{pmatrix} = M\cdot \begin{pmatrix}x\\y\end{pmatrix} + \vec{t}
+\end{equation*}
+\begin{myexample}
+Spiegelung an der Geraden $x=5$
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/SpiegelungGeraden.png}
+\end{center}
+Mit $d=5-x$ und $x'=5+d$ wird $x'=5+5-x=10-x$. Also
+\begin{eqnarray*}
+x' &=& -x +10\\
+y' &=& y
+\end{eqnarray*}
+\end{myexample}
+\begin{myexample}
+Welche Abbildungsvorschrift hat diejenige affine Abbildung, die 
+\begin{itemize}
+	\item $P(1/-1)$ auf $P'(7/2)$
+	\item die x-Achse auf die Gerade $g' : x'+y'-5 = 0$
+	\item und die y-Achse auf die Gerade $h' : x' - 3y' + 3 = 0$
+\end{itemize}
+abbildet?
+Es ist
+\begin{eqnarray*}
+x'=ax+by+c\\
+y'=dx+ey+f
+\end{eqnarray*}
+Mit $P, P'$ wird
+\begin{eqnarray*}
+7 &=& a-b+c \textit{(1)}\\
+2 &=& d-e+f \textit{(2)}
+\end{eqnarray*}
+Weiter ist $s=g'\cap h'$ das Bild des Ursprungs. Wir finden $s$ mit 
+\begin{eqnarray*}
+\begin{vmatrix}x' + y'-5 = 0\\x'-3y + 3 = 0\end{vmatrix}\\
+4y'-8 = 0\\
+y' = 2
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+3=c \textit{ (3)}\\
+2=f \textit{ (4)}
+\end{eqnarray*}
+Die x-Achse hat die Gleichung $y=0$. Damit finden wir
+\begin{eqnarray*}
+x'=ax+c\\
+y'=dx+f
+\end{eqnarray*}
+was die Gerade 
+\begin{equation*}g: ax+c+dx+f-5 = 0\end{equation*}
+ergeben muss. Mit (3) und (4) ist also
+\begin{eqnarray*}
+ax+3+dx+2-5 &=& 0\\
+ax+dx&=& 0\\
+x(a+d) &=& 0\\
+a+d&=& 0 \textit{ (5)}
+\end{eqnarray*}
+Für die y-Achse ist $x=0$, also
+\begin{eqnarray*}
+x'=by +3\\
+y'=ey+2
+\end{eqnarray*}
+was in $h'$ eingesetzt
+\begin{eqnarray*}
+by+3-3(ey+2) + 3 &=& 0\\
+by+3-3ey-6+3 &=& 0\\
+by-3ey &=& 0\\
+y(b-3e) &=& 0\\
+b-3e &=& 0 \textit{ (6)}
+\end{eqnarray*}
+ergibt. So werden
+\begin{eqnarray*}
+\textit{(1) } 7&=&a-b+3\\
+\textit{(2) } 2 &=&d-e+2\\
+\textit{(5) } a+d &=& 0\\
+\textit{(6) } b-3e &=& 0\\ 
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+\textit{(1) } a-b &=& 4\\
+\textit{(2) } d-e &=& 0
+\end{eqnarray*}
+Mit (2) wird $d=e$ in (5):
+\begin{eqnarray*}
+\textit{(5) } a+e = 0\\
+\textit{(6) } b-3e = 0\\
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+4a&=& 4\\
+a &=& 1\\
+\textit{in (1): } b&=&-3\\
+\textit{in (5): } d&=&-1\\
+\textit{in (2): } e&=&-1
+\end{eqnarray*}
+somit lautet die Vorschrift
+\begin{eqnarray*}
+x'= x-3y+3\\
+y' = -x-y+2
+\end{eqnarray*}
+\end{myexample}
+\newpage
+\begin{myexample}
+	Eine lineare Abbildung $m$ bildet $P(1/1)$ in $P'(5/-3)$ und $(2/1)$ in $Q(7/-4)$ ab; wie lautet die Abbildungsmatrix?
+	\begin{eqnarray*}
+		\shortintertext{P:}
+		\begin{tabular}{|l|l}
+			5 = a + b&(1)\\
+			-3 = c + d &(2)
+		\end{tabular}
+		\shortintertext{Q:}
+		\begin{tabular}{|l|l}
+			7 = 2a + b&(3)\\
+			-4 = 2c + d &(4)
+		\end{tabular}
+		\shortintertext{(1)-(3):}
+		-2 = -a\\
+		\underline{a = 2}
+		\shortintertext{a in (1)}
+		5 = 2 + b\\
+		\underline{b = 3}
+		\shortintertext{(2)-(4):}
+		1 = -c\\
+		\underline{c = -1}
+		\shortintertext{in (4)}
+		-4 = -2 + d\\
+		\underline{d = -2}
+		\shortintertext{Wir haben die Matrix}
+			m = \begin{pmatrix}
+					2 & 3\\
+					-1 & -2
+				\end{pmatrix}
+	\end{eqnarray*}
+\end{myexample}
+\newpage
+\section{Abbildungen $R^3 \to R^2$}
+Wollen wir ein dreidimensionales Objekt auf dem Bildschirm darstellen, so stehen uns dijenigen zwei Projekttionsarten zur Verfügung, denen wir auch im täglichen Leben begegnen:  Sonnenlicht und Kunstlicht\\
+\\
+\underline{\textbf{Zentralprojektion}}\\
+\\
+Gehen alle Sehstrahlen durch einen festen Punkt ausserhalb der Projektionsebene, so sprechen wir von einer Zentralrpojektion. Eine Zentralprojektion ist also durch die Angabe dieses ausgezeichneten Punktes, den wir \textbf{Projektionszentrum oder Auge} nennen, gegeben.
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/zentralprojektion.png}
+ \end{center}
+\underline{\textbf{Parallelprojektion}}\\
+\\
+Bei der ParallelProjektion sind alle Sehstrahlen paralell. Eine Paralellprojektion ist also durch die Angabe eines Sehstrals bestimmt. Der Winkel zwischen Sehstrahl und Tafel soll natürlich von $0^\circ$ verschieden sein. Ist dieser Winkel $90^\circ$, so sprechen wir von einer \textbf{Normalprojektion}, andernfalls von \textbf{schiefer Parallelprojektion oder Axonometrie}.
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/paralellprojektion.png}
+ \end{center}
+\subsection{Axonometrie}
+\begin{center}
+	 \includegraphics[width=0.7\textwidth]{imgs/axonometrie1.png}
+ \end{center}
+Der Würfel wirkt verzerrt.
+\newpage
+\noindent
+Bei einer Axonomie wählen wir den Winkel $\alpha$ zwischen  x- und y- Achse und das Verkürzungsverhältnis k, weil alle Projekktionen in x Richtung verkürzt werden.
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/axonometrie2.png}
+ \end{center}
+\newpage
+\noindent
+Welches sind die Koordinaten des projizierten Punktes $p'(x'/y')$, wenn $p(y/y/z)$ die Koord. des Punktes im Raum sind?
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/axonometrie3.png}
+ \end{center}
+Die Fläche welche die Vektoren $e_3$ und $e_2$ aufspannen, stellen wir uns dabei als imaginären Bildschrim vor. Wir wollen die Position des Punktes $p'(x'/y')$ auf dem Bildschirm herausfinden.\\
+\\
+Wir beginnen mit der Suche nach $x'p$, dem Abstand in y Richtung vom Urpsrung
+\begin{eqnarray*}
+x'p = y_p-d
+\shortintertext{wobei}
+\beta &=& 180^\circ -\alpha\\
+\cos\beta &=& \frac{d}{kxp}\\
+d &=& kxp\cos\beta
+\shortintertext{und}
+\beta &=& 180^\circ - \alpha\\
+&=& - \cos(\alpha)
+\shortintertext{damit wird}
+d = -kxp\cos(\alpha)
+\shortintertext{somit}
+x'p &=& yp - d\\
+&=& yp + kxp \cos(\alpha)
+ \end{eqnarray*}
+ Weiter suchen wir den Punkt $y'p$, dem Abstand in z Richtung vom Ursprung
+ \begin{eqnarray*}
+ y'p &=& z_p -e
+ \shortintertext{wobei}
+ \cos\delta &=& \frac{e}{kxp}\\
+ e &=& kxp\cos\delta
+ \shortintertext{und}
+ \delta &=& \alpha - 90^\circ
+ \shortintertext{also}
+ \cos{\delta} &=& cos(\alpha -90^\circ)\\
+ &=& cos(-(90^\circ-\alpha))\\
+ &=& cos(90^\circ -\alpha)\\
+ &=& sin(\alpha)
+ \shortintertext{somit}
+ y'p = zp-kxp\sin(\alpha)
+ \end{eqnarray*}
+ Somit lautet die Abbildungsvorschrift für die Axionometrie\\
+ \begin{mathbox}
+ 	\begin{eqnarray*}
+ 		x' = y + kx\cos(\alpha)\\
+ 		y' = z - kx\sin(\alpha)\\
+ 	\end{eqnarray*}
+ \end{mathbox}
+\newpage
+\begin{myexample}
+	Konstruiere eine grosse Axonometrie $(\alpha= 150^\circ, k = \frac{1}{2}$ des Einheitswürfels $ABCDEGH$ mit $A$ im Ursprung, $B(1/0/0)$, E über A, F über B etc.
+	\begin{enumerate}
+		\item
+		$Z$ ist der Schnittpunkt der Raumdiagonalen; zeichne das Dreieck $ACZ$ mit Farbe und berechne dessen Flächeninhalt.
+		\item
+		Berechne den (kürzesten) Abstand des Mittelpunktes der Kante $CG$ von der Geraden durch $C$ und $E$	
+	\end{enumerate}
+	\begin{center}
+		 \includegraphics[width=0.8\textwidth]{imgs/axonometrieBeispiel.png}
+ 	\end{center}
+	zu 1.)
+	\begin{eqnarray*}
+		F(\triangle ACZ) = \frac{gh}{2}
+		\shortintertext{wobei}
+		g = |AC| = \sqrt{2}\\
+		h = \frac{1}{2}
+		\shortintertext{also}
+		F(\triangle ACZ) = \frac{\sqrt{2}}{4}
+	\end{eqnarray*}
+	zu 2.)
+	\begin{eqnarray*}
+		\triangle CMF \sim \triangle CGE\\ 
+		\frac{d}{|EG|} = \frac{MC}{CE} \to \frac{d}{2} = \frac{\frac{1}{2}}{\sqrt{3}}\\
+		\to d = \frac{\sqrt{2}}{2\sqrt{3}} = \frac{\sqrt{2}*\sqrt{3}}{2*3} = \frac{\sqrt{6}}{6}
+	\end{eqnarray*}
+\end{myexample}
+\section{Abbildungen $\mathbb{R}^3 \to \mathbb{R}^3$}
+\subsection{Spiegelung an der Grundrissebene}
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/R3spiegelungGrundrissebene.png}
+ \end{center}
+\begin{eqnarray*}
+x' = x\\
+y'= y\\
+z'=-z
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+s'=\begin{pmatrix}1&0&0\\0&1&0\\0&0&-1\end{pmatrix}
+\end{eqnarray*}
+\newpage
+\subsection{Spiegelung am Ursprung}
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/R3spiegelungUrsprung.png}
+\end{center}
+\begin{eqnarray*}
+M=\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&-1\end{pmatrix}
+\end{eqnarray*}
+\newpage
+\subsection{Spiegelung an einer Geraden}
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/R3spiegelungZAchse.png}
+\end{center}
+\begin{eqnarray*}
+x' = -x\\
+y'= -y\\
+z'=z
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+Z=\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&1\end{pmatrix}
+\end{eqnarray*}
+\newpage
+\subsection{Spiegelung an der Geraden $g: \vec{p} = \lambda \vec{v}$ mit $|\vec{v}| = 1$}
+\textbf{Vorbereitung:}
+\begin{mydef}
+Sind $\vec{a}$ und $\vec{b}$ linear unabhängig, so heisst $\vec{ba}$ die vektorielle Projektion und $|\vec{ba}|$ die skalare Projektion von $\vec{b}$ auf $\vec{a}$
+\end{mydef}
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/R3spiegelungGeraden1.png}
+\end{center}
+Es ist \begin{eqnarray*}
+\cos{\varphi} &=& \frac{|\vec{ba}|}{|\vec{b}|}\\
+|\vec{ba}| &=& |\vec{b}| \cdot \cos{\varphi}\\
+\cos{\varphi} &=&  \frac{\vec{a}\cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+|\vec{ba}| &=& |\vec{b}| \cdot \frac{\vec{a}\cdot \vec{b}}{|\vec{a}|\cdot|\vec{b}|}\\
+|\vec{ba}| &=& \frac{\vec{a}}{|\vec{a}|}
+\end{eqnarray*}
+Es ist $\frac{\vec{a}}{|\vec{a}|}$ ein Vektor mit Länge 1, ein normierter Vektor. Also wird
+\begin{eqnarray*}
+\vec{ba} &=& |\vec{ba}|\cdot \frac{\vec{a}}{|\vec{a}|}\\
+\vec{ba} &=& \frac{\vec{a}\vec{b}}{|\vec{a}|} \cdot \frac{\vec{a}}{|\vec{a}|}\\
+\vec{ba} &=& \frac{\vec{a}\vec{b}}{|\vec{a}|^2} \cdot \vec{a}\\
+\shortintertext{Ist}
+|\vec{a}| &=& 1
+\shortintertext{so wird}
+\vec{ba}&=&(\vec{a}\vec{b})\cdot \vec{a}
+\end{eqnarray*}
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/R3spiegelungGeraden2.png}
+\end{center}
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/R3spiegelungGeraden3.png}
+\end{center}
+\begin{eqnarray*}
+\vec{p_v} &=& \frac{\vec{p}\vec{v}}{\vec{v}^2}\cdot\vec{v} \textit{ und $|\vec{v}|=1$ }\\
+\vec{p_v} &=& (\vec{p}\vec{v})\vec{v}
+\end{eqnarray*}
+Es ist 
+\begin{eqnarray*}
+\vec{p}' &=& \vec{p} + 2((\vec{p}\vec{v})\vec{v}-\vec{p})\\
+\vec{p}' &=& 2(\vec{p}\vec{v})\vec{v}-\vec{p}
+\end{eqnarray*}
+Mit $\vec{p}=\begin{pmatrix}x\\y\\z\end{pmatrix}$, $\vec{v}=\begin{pmatrix}v_1\\v_2\\v_3\end{pmatrix}$, $\vec{p'}=\begin{pmatrix}x'\\y'\\z'\end{pmatrix}$ wird
+\begin{equation*}
+\vec{p}\vec{v} = v_1x+v_2y+v_3z
+\end{equation*}
+Also
+\begin{eqnarray*}
+(\vec{p}\vec{v})\vec{v} = \begin{pmatrix}v_1^2x+v_1v_2y+v_1v_3z\\v_1v_2x+v_2^2y+v_2v_3z\\v_1v_3x+v_2v_3y+v_3^2z\end{pmatrix}
+\end{eqnarray*}
+Also
+\begin{eqnarray*}
+\vec{p'} = \begin{pmatrix}2v_1^2x + 2v_1v_2y + 2v_1v_3z -x\\2v_1v_2x+2v_2^2 y + 2v_2v_3z -y\\2v_1v_3+2v_2v_3y+2v_3^2z-z\end{pmatrix}
+\end{eqnarray*}
+was folgender Matrix entspricht:
+\begin{equation*}
+G = \begin{pmatrix}2v_1^2-1&2v_1v_2&2v_1v_3\\2v_1v_2&2v_2^2-1&2v_2v_3\\2v_1v_3&2v_2v_3&2v_3^2-1\end{pmatrix}
+\end{equation*}
+Kontrolle mit Spiegelung an der Z-Achse: Es ist $\vec{v}=\begin{pmatrix}0\\0\\1\end{pmatrix}$ und somit $|\vec{v}=1|$. Also
+\begin{equation*}
+\begin{pmatrix}-1&0&0\\0&-1&0\\0&0&1\end{pmatrix}
+\end{equation*}
+\newpage
+\subsection{Spiegelug an der Ebene $\Sigma: ax + by + cz = 0$}
+Der Normalenvektor
+\begin{equation*}
+\vec{n} = \begin{pmatrix}a\\b\\c\end{pmatrix}
+\end{equation*}
+sei normiert.
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/spiegelungAnEbene1.png}
+ \end{center}
+\begin{equation*}
+	\vec{a_1} = \vec{a} + 2\vec{x}
+\end{equation*}
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/spiegelungAnEbene2.png}
+ \end{center}
+$-\vec{x}$ ist die skalare Projektion, also 
+\begin{eqnarray*}
+-\vec{x} = (\vec{a}\vec{n})\vec{n}
+\shortintertext{da}
+|\vec{n}| = 1
+\shortintertext{ist, Damit wird}
+\vec{a_1} = \vec{a} -2(\vec{a}\vec{n})\vec{n}
+\shortintertext{ist}
+\vec{a} = \begin{pmatrix}x\\y\\z\end{pmatrix}
+\shortintertext{und}
+\vec{a_1} = \begin{pmatrix}x_1\\y_1\\z_1\end{pmatrix}
+\shortintertext{sow ird}
+\vec{a}\vec{n} = ax + by + cz
+\shortintertext{und}
+2(\vec{a}\vec{n})\vec{n} = \begin{pmatrix}
+2a^2x + 2aby + 2acz\\
+2abx + 2b^2y + 2bcz\\
+2acx + 2bcy + 2c^2z
+\end{pmatrix}
+\shortintertext{was}
+\vec{a_1} = \begin{pmatrix}
+x - 2a^2x - 2aby - 2acz\\
+y - 2abx - 2b^2y - 2bcz\\
+z - 2acx - 2bcy - 2c^2z
+\end{pmatrix}
+\end{eqnarray*}
+ergibt.\\
+Damit wird die Matrix\\
+\begin{mathbox}
+	\begin{equation*}
+		S = \begin{pmatrix}
+		1-2a^2&-2ab& -2ac\\
+		-2ab&1-2b^2&-2bc\\
+		-2ac&-2bc& 1-2c^2\end{pmatrix}
+	\end{equation*}
+\end{mathbox}
+\begin{myexample}
+	Spiegelung an der Aufrissebene $\pi_2$
+	\begin{eqnarray*}
+		\shortintertext{Es ist}
+		\vec{n} = \begin{pmatrix}1\\0\\0\end{pmatrix}
+		\shortintertext{also}
+		S = \begin{pmatrix}-1 &0&0\\
+		0&1&0\\
+		0&0&1\end{pmatrix}
+	\end{eqnarray*}
+\end{myexample}
+\newpage
+\subsection{Drehung um den Ursprung}
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/drehungUmUrsprung1.png}
+\end{center}
+Zum Rechnen ist es einfacher, wenn wir die Koordinatenachse drehen.\\
+Zuerst die x- und die y-Achse um die z- Achse drehen und dann um die gedrehte $x_1$- Achse drehen.
+\begin{center}
+	 \includegraphics[width=\textwidth]{imgs/drehungUmUrsprung2.png}
+\end{center}
+Die zweidimensionale Drehmatrix ist
+\begin{equation*}
+	D = \begin{pmatrix}\cos{\alpha}&-\sin(\alpha)\\
+	\sin(\alpha) & \cos(\alpha)\end{pmatrix}
+\end{equation*}
+und wir drehen das Koordinatensystem. Das bedeutet, dass ein Punkt mit $-\alpha$ gedreht wird. Also
+\begin{eqnarray*}
+	x_1 &=& x\cos(-\alpha)-ys\sin(-\alpha)\\
+	y_1 &=& x\sin(-\alpha)+y\cos(-\alpha)\\
+	z_1 &=& z
+	\shortintertext{Mit}
+	\cos(-\alpha) &=& \cos(\alpha)\\
+	sin(\alpha) &=& -\sin(\alpha)
+	\shortintertext{wird}
+	x_1 &=& x\cos(\alpha)+y\sin(\alpha)\\
+	y_1 &=& -x\sin(\alpha)+y\cos(\alpha)\\
+	z_1 &=& z
+\end{eqnarray*}
+Nun drehen wir mit $\beta$ um die $x_1$ - Achse.\\
+Also wird
+\begin{eqnarray*}
+	x_2 &=& x_1\\
+	y_2 &=& y_1\cos\beta +z_1\sin\beta\\
+	z_2 &=& -x_1\sin\beta + z_1\cos\beta
+	\shortintertext{so wird}
+	x_2 &=& x\cos(\alpha) + y\sin(\alpha)\\
+	y_2 &=& (-x\sin(\alpha)+y\cos(\alpha))\cos\beta+z\sin\beta\\
+	&=& -x\sin(\alpha)\cos\beta+y\cos(\alpha)\cos\beta+z\sin\beta\\
+	z_2 &=& (x\sin(\alpha)-y\cos(\alpha))\sin\beta+z\cos\beta)\\
+	&=& x\sin(\alpha)\sin\beta-y\cos(\alpha)\sin\beta+z\cos\beta
+	\shortintertext{also}
+	D &=& \begin{pmatrix}\cos(\alpha)& \sin(\alpha) & 0\\
+	-\sin(\alpha)\cos(\alpha)& \cos(\alpha)\cos\beta& \sin\beta\\
+	\sin(\alpha)\sin\beta& -\cos(\alpha)\sin\beta& \cos\beta\end{pmatrix}
+\end{eqnarray*}
+\newpage
+\subsection{Drehung mit Winkel $\delta $ um die gerade $g: p = \lambda \vec{v}$ , $|\vec{o}| = 1$ durch den Ursprung}
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/drehungMitWinkel1.png}
+ \end{center}
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/drehungMitWinkel2.png}
+ \end{center}
+\begin{eqnarray*}
+	\vec{y} = \vec{r}\cos\delta+\vec{s}\sin{\delta}
+	\shortintertext{Es ist }
+	\vec{a_1} = \vec{d} + \vec{y}
+	\shortintertext{und}
+	\vec{s} = \vec{r} \times \vec{v}
+	\shortintertext{und}
+	\vec{d} = \text{die vektorielle Projektion von $\vec{a}$ auf $\vec{v}$}
+	\shortintertext{also}
+	\vec{d} = (\vec{v}\cdot \vec{a})\vec{v}
+	\shortintertext{so wird}
+	\vec{a_1} = \vec{d} + \vec{r}\cos\delta+(\vec{v}\times\vec{a})\sin\delta
+	\shortintertext{weil}
+	\vec{s} = \vec{r}\times \vec{v} = \vec{v}\times (\vec{a}-\vec{d})\\
+	= \vec{v} \times \vec{a} -\vec{v} \times \vec{d}
+	\shortintertext{aber}
+	\vec{v} \times \vec{d} = \vec{o}
+	\shortintertext{Also}
+	\vec{a_1} = \vec{d} + (\vec{a}-\vec{d})\cos\delta+ (\vec{v}\times \vec{a})\sin\delta\\
+	= \vec{d}(1-\cos\delta)+\vec{\alpha}\cos\delta+(\vec{v}\times\vec{a})\sin\delta\\
+	\vec{a_1} = (\vec{v}\cdot\vec{a})\vec{a}(1-\cos\delta)+\vec{a}\cos\delta+(\vec{v}\times\vec{a})\sin\beta\\
+	\ldots
+\end{eqnarray*}
+Wir finden schlussendlich die Drehmatrix\\
+\begin{mathbox}
+	\begin{equation*}
+		D = \begin{pmatrix}v_1^2(1-\cos\delta)+\cos\delta&v_1v_2(1-\cos\delta)-v_3\sin\delta& v_1v_3(1-\cos\delta)+v_2\sin\delta\\
+		v_1v_2(1-\cos\delta)+v_3\sin\
+		delta& v_2^2(1-\cos\delta)+\cos\delta& v_2v_3(1-\cos\delta)-v_1\sin\delta\\
+		v_1v_3(1-\cos\delta)-v_2\sin\delta&v_2v_3(1-\cos\delta)+v_1\sin\delta& v_3^2(1-\cos\delta)+ \cos\delta
+		\end{pmatrix}
+	\end{equation*}
+	\smallskip
+\end{mathbox}
+\newpage
+\noindent Bei einer Drehung um eine der Koordinatenachsen ist festgelegt, dass der Blickwinkel zum Ursprung von der positiven Richtung aus zu wählen ist. Dann ist im Gegenuhrzeigersinn (positive Richtung) zu drehen.
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/drehungUmKoordinatenachseAllgemein.png}
+ \end{center}
+Drehen wir z.B. um die x-Achse, so ist $x=x'$ und wir können eine z-dimensionale Drehung in der Hauptebene $\Sigma_z$ betrachten.
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/drehungUmKoordinatenachseX.png}
+ \end{center}
+Mit 
+\begin{eqnarray*}
+D&=&\begin{pmatrix}\cos{\alpha}&-\sin{\alpha}\\\sin{\alpha}&\cos{\alpha}\end{pmatrix}
+\shortintertext{wird}
+x' &=& x\\
+y' &=& y \cos{\alpha}-z \sin{\alpha}\\
+z' &=& y \sin{\alpha} + z \cos{\alpha}
+\shortintertext{also}
+R_x &=& \begin{pmatrix}{\color{red}1}&{\color{red}0}&{\color{red}0}\\{\color{red}0}&\cos{\alpha}&-\sin{\alpha}\\{\color{red}0}&\sin{\alpha}&\cos{\alpha}\end{pmatrix}
+\end{eqnarray*}
+\begin{myexample}
+Punkt $P(4/3/2)$ wird mit $60^{\circ}$ um die x-Achse gedreht.
+\begin{eqnarray*}
+D_x = \begin{pmatrix}1&0&0\\0&\cos{60^{\circ}}&-\sin{60^{\circ}}\\0&\sin{60^{\circ}}&\cos{60^{\circ}}\end{pmatrix} = \begin{pmatrix}1 & 0 & 0\\0 & \frac{1}{2} & -\frac{\sqrt{3}}{2}\\0&\frac{\sqrt{3}}{2}&\frac{1}{2}\end{pmatrix}
+\shortintertext{wird}
+\vec{p}' = D_x \cdot \vec{p}
+\end{eqnarray*}
+also $P'(4/1-\sqrt{3}/\sqrt{3}+1)$.
+\end{myexample}
+Drehen wir um die y-Achse,
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/drehungUmKoordinatenachseY.png}
+\end{center}
+so haben wir ein \underline{Linkssystem} erhalten. Also müssen wir mit $-\alpha$ drehen, was
+\begin{eqnarray*}
+x'&=&x\cos{-\alpha} + z(\sin{-\alpha)}\\
+y'&=&y\\
+z'&=&x\sin{-\alpha}+z\cos{-\alpha}
+\shortintertext{also}
+x'&=&x\cos{\alpha} + z\sin{\alpha}\\
+y'&=&y\\
+z'&=&-x\sin{\alpha}+z\cos{\alpha}\\
+R_y= \begin{pmatrix} \cos \alpha &{\color{red}0}& \sin \alpha\\{\color{red}0}&{\color{red}1}&{\color{red}0} \\ -\sin \alpha &{\color{red}0}& \cos \alpha \end{pmatrix}
+\end{eqnarray*}
+Drehen wir um die z-Achse
+\begin{eqnarray*}
+R_z= \begin{pmatrix} \cos \alpha & -\sin \alpha &{\color{red}0}\\ \sin \alpha & \cos \alpha &{\color{red}0}\\{\color{red}0}&{\color{red}0}&{\color{red}1}\end{pmatrix}
+\end{eqnarray*}
+\newpage
+\section{Gleichungssysteme 2}
+\subsection{Inhomogenes Gleichungssysteme}
+Wir betrachten ein lineares Gleichungssystem mit n Gleichungen und n Variablen.
+\begin{equation*}
+\begin{vmatrix}
+a_{11}x_1+a_{12}x_2+a_{13}x_3 + ... + a_{1n}x_n = b1\\
+a_{21}x_1+a_{22}x_2+a_{23}x_3 + ... + a_{2n}x_n = b2\\
+...\\\
+a_{n1}x_1+a_{n2}x_2+a_{n3}x_3 + ... + a_{nn}x_n = bn\\
+a_{n1}x_1+a_{n2}x_2+a_{n3}x_3 + ... + a_{nn}x_n = bn\\
+\end{vmatrix}
+\end{equation*}
+was wir mit Hilfe von Vektoren und Matrizen als
+\begin{equation*}
+Ax = B
+\end{equation*}
+schreiben können. x heisst dann der \underline{Lösungsvektor}.
+\begin{mydef}
+Ist $Ax=B$ und $B=0$, so heisst das Gleichungssystem \underline{homogen}, im anderen Falle \underline{inhomogen}.
+\end{mydef}
+Zum Lösen eines Gleichungssystems kennen wir 3 Möglichkeiten:
+\begin{enumerate}
+	\item Cramersche Regel: Braucht die Determinanten $D_{x1}, D_{x2}$, etc. und $D$.
+	\item Mit Matrizen: $Ax=B \to x = A^{-1}B$ und für das Berechnen von $A^{-1}$ brauchen wir $Det(A)$
+	\item Gauss-Algorithmus: Addieren wir ein Vielfaches einer Zahl zu einer anderen Zeile, so bleibt die Lösungsmenge die gleiche.
+\end{enumerate}
+\newpage
+\section{Determinanten} 
+\begin{mydef}
+Unter einer $n$\textit{\textbf{-reihigen
+Determinante}} verstehen wir eine bestimmte Funktion \\ von $n^2$
+Variablen, f\"{u}r die wir
+\begin{center}
+
+$ \left | \begin {array}{cccc} a_1 & a_2 & \dots  & a_n\\
+                                b_1 & b_2 & \dots & b_n\\
+                                \dots\\
+                                \dots\\
+                                k_1 & k_2 & \dots & k_n\end{array} \right | $
+\end{center}
+schreiben. Die Variablen $a_1, \dots , k_n$ heissen
+\textit{\textbf{Elemente}} der Determinante und $ a_1, b_2, c_3 \dots k_n$ heisst \textit{\textbf{Hauptdiagonale}}.\\
+Die $n$-reihige Determinante ist definiert durch die Rekursion :
+
+\vspace{0.5cm}
+
+$ \left | \begin {array}{rrrr} a_1 & a_2 & \dots  & a_n\\
+                                b_1 & b_2 & \dots & b_n\\
+                                \dots\\
+                                \dots\\
+                                k_1 & k_2 & \dots & k_n\end{array} \right
+                                | : = $ \\
+$a_1 \cdot \left | \begin {array}{rrrr} b_2 & b_3 & \dots & b_n\\
+                                \dots\\
+                                \dots\\
+                                k_2 & k_3 & \dots & k_n\end{array}
+                                \right |
+- a_2 \cdot \left | \begin {array}{rrrr} b_1 & b_3 & \dots & b_n\\
+                                \dots\\
+                                \dots\\
+                                k_1 & k_3 & \dots & k_n\end{array}
+                                \right |
++ \dots + (-1)^{n-1}a_n\cdot \left | \begin {array}{rrrr} b_1 & b_2 & \dots & b_{n-1}\\
+                                \dots\\
+                                \dots\\
+                                k_1 & k_2 & \dots & k_{n-1}\end{array}
+                                \right |$
+\end{mydef}
+\vspace{0.5cm}
+\begin{myexample}
+$ \left | \begin {array}{rrrr} 1 & 0 & 1  & 1\\
+                                1 & 1 & 1 & 0\\
+                                0 & 1 & 1 & 0\\
+                                1 & 1 & 0 & 1 \end{array} \right | =
+1\cdot \left | \begin {array}{rrr} 1 & 1 & 0\\
+                                    1 & 1 & 0\\
+                                    1 & 0 & 1 \end{array} \right |
+-0 + 1 \cdot \left | \begin {array}{rrr} 1 & 1 & 0\\
+                                     0 & 1 & 0\\
+                                     1 & 1 & 1 \end{array} \right |
+-1 \cdot \left | \begin {array}{rrr} 1 & 1 & 1\\
+                                     0 & 1 & 1\\
+                                     1 & 1 & 0 \end{array} \right |
+                                     =$
+
+\vspace{0.5cm}
+
+\hspace{0.8cm} $ = \left | \begin {array}{rr} 1 & 0 \\
+                             0 & 1 \end{array} \right |
+- \left | \begin {array}{rr} 1 & 0 \\
+                             1 & 1 \end{array} \right |
++ 0 + \left | \begin {array}{rr} 1 & 0 \\
+                                1 & 1 \end{array} \right |
+- \left | \begin {array}{rr} 0 & 0 \\
+                             1 & 1 \end{array} \right |
++ 0 -\left | \begin {array}{rr} 1 & 1 \\
+                                1 & 0 \end{array} \right |
++ \left | \begin {array}{rr} 0 & 1 \\
+                             1 & 0 \end{array} \right |
+- \left | \begin {array}{rr} 0 & 1 \\
+                             1 & 1 \end{array} \right | = $
+
+\vspace{0.5cm}
+
+\hspace{0.8cm} $ = 1 - 1 + 1 + 1 - 1 + 1 = 2$
+\end{myexample}
+\newpage
+\subsubsection{Eigenschaften von Determinanten }
+\begin{enumerate}
+%1
+\item Werden in einer Determinante zwei Zeilen vertauscht, so
+\"{a}ndert ihr Wert das Vorzeichen
+%2
+\item Eine Determinante mit zwei gleichen Zeilen hat den Wert Null
+%3
+\item Wenn in einer Determinante s\"{a}mtliche Elemente einer Zeile
+Null sind, so hat die Determinante den Wert Null
+%4
+\item Multiplizieren wir alle Elemente einer Zeile mit $\lambda
+\in \R$, so ist der Wert der neuen Determinante gleich dem
+$\lambda$-fachen der urspr\"{u}nglichen:
+
+\vspace{0.4cm}
+$\left | \begin {array}{ccc} a_1 & a_2 & a_3\\
+                                     b_1 & b_2 & b_3\\
+                                     \lambda c_1 & \lambda c_2 & \lambda c_3 \end{array} \right |
+                                     =
+\lambda \cdot \left | \begin {array}{ccc} a_1 & a_2 & a_3\\
+                                     b_1 & b_2 & b_3\\
+                                     c_1 & c_2 & c_3 \end{array} \right
+                                     |$
+\vspace{0.4cm}
+%5
+\item Eine Determinante \"{a}ndert ihren Wert nicht, wenn wir zu einer
+Zeile ein beliebiges Vielfaches einer anderen Zeile addieren:
+
+\vspace{0.4cm}
+
+$\left | \begin {array}{ccc} a_1 & a_2 & a_3\\
+                                     b_1 & b_2 & b_3\\
+                                     c_1 +\lambda a_1 & c_2 + \lambda a_2 & c_3 +\lambda a_3 \end{array} \right |
+                                     =
+\left | \begin {array}{ccc} a_1 & a_2 & a_3\\
+                                     b_1 & b_2 & b_3\\
+                                     c_1 & c_2 & c_3 \end{array} \right
+                                     |$
+\end{enumerate}
+\vspace{1cm}
+\begin{mydef}
+Spiegeln wir die Elemente einer Determinante $D$ an
+der Hauptdiagonalen, so erhalten wir die
+\textit{\textbf{transponierte Determinante $D^{T}$.}}
+\end{mydef}
+\vspace{0.5cm}
+\textbf{Satz} : Eine Determinante ist gleich ihrer
+Transponierten.\\
+\textbf{Beweis}: mit vollst\"{a}ndiger Induktion nach der Zeilenzahl.
+Damit ist auch gezeigt, dass die oben aufgef\"{u}hrten Eigenschaften
+ebenso f\"{u}r Kolonnen gelten.
+\newpage
+\noindent
+\textbf{Satz} : Eine Determinante, die oberhalb oder unterhalb der
+Hauptdiagonalen lauter Nullen aufweist, ist gleich dem Produkt der
+Elemente der Hauptdiagonalen.\\
+\vspace{0.3cm}
+\textbf{Beweis} : $ \left | \begin {array}{cccc} a_1 & 0 & 0 & 0\\
+                                b_1 & b_2 & 0 & 0 \\
+                                c_1 & c_2 & c_3 & 0\\
+                                d_1 & d_2 & d_3 & d_4\end{array} \right | =
+a_1 \cdot \left | \begin {array}{ccc}  b_2 & 0 & 0 \\
+                                       c_2 & c_3 & 0\\
+                                       d_2 & d_3 & d_4\end{array} \right | =
+a_1b_2 \cdot \left | \begin {array}{cc} c_3 & 0\\
+                                        d_3 & d_4\end{array} \right |
+                                = a_1\,b_2\,c_3\,d_4$
+\\
+Diese Eigenschaft von Determinanten erlaubt es uns, zusammen mit
+Eigenschaft (5), das Berechnen von Determinanten zu vereinfachen.
+Wir addieren einfach passende Vielfache zu einer Kolonne oder
+Zeile, so dass wir schlussendlich eine Determinanten erhalten, die
+ober- oder unterhalb der Hauptdiagonalen lauter Nullen aufweist.
+Dies l\"{a}sst sich nat\"{u}rlich auch mit dem Gauss'schen Algorithmus
+bewerkstelligen.
+
+\vspace{0.5cm}
+
+\begin{myexample}
+$ \left | \begin {array}{rrrr}  1 & 1 & 1  & 1\\
+                                1 & 1 & -1 & -1\\
+                                1 & -1 & 1 & -1\\
+                                1 & -1 & -1 & 1 \end{array} \right | =
+ \left | \begin {array}{rrrr}  1 & 1 & 1  & 2\\
+                                1 & 1 & -1 & 0\\
+                                1 & -1 & 1 & 0\\
+                                1 & -1 & -1 & 2 \end{array} \right
+                                |$ (Addition der 1. zur 4. Kolonne
+                                )
+\vspace{0.4cm}
+
+\hspace{0.8cm}  $ = \left | \begin {array}{rrrr}  1 & 1 & 2  & 2\\
+                                1 & 1 & 0 & 0\\
+                                1 & -1 & 2 & 0\\
+                                1 & -1 & 0 & 2 \end{array} \right
+                                |$ (Addition der 1. zur 3. Kolonne)
+
+\vspace{0.4cm}
+
+\hspace{0.8cm}  $ = \left | \begin {array}{rrrr}  0 & 2 & 2  & 0\\
+                                1 & 1 & 0 & 0\\
+                                1 & -1 & 2 & 0\\
+                                1 & -1 & 0 & 2 \end{array} \right
+                                |$ (Subtraktion der 4. von der 1. Zeile)
+
+\vspace{0.4cm}
+
+\hspace{0.8cm}  $ = \left | \begin {array}{rrrr}  -1 & 3 & 0  & 0\\
+                                1 & 1 & 0 & 0\\
+                                1 & -1 & 2 & 0\\
+                                1 & -1 & 0 & 2 \end{array} \right
+                                |$ (Subtraktion der 3. von der 1. Zeile)
+
+
+\vspace{0.4cm}
+
+\hspace{0.8cm}  $ = \left | \begin {array}{rrrr}  -4 & 0 & 0  & 0\\
+                                1 & 1 & 0 & 0\\
+                                1 & -1 & 2 & 0\\
+                                1 & -1 & 0 & 2 \end{array} \right
+                                |$ (Subtraktion des Dreifachen der 2. von der 1. Zeile)
+
+\vspace{0.4cm}
+
+\hspace{0.8cm}  $= -4 \cdot 1 \cdot 2 \cdot 2 = -16$
+\end{myexample}
+\newpage
+\section{Gauss Algorithmus}
+Grundlegend ist die Überlegung, dass das Addieren eines Vielfachen einer Zeile zu einer aneren Zeile immer noch diesselbe Lösung ergibt.\\
+\begin{center}
+\begin{tabular}{|l|l}
+	x + 3y + 2z = 2&(1)\\
+	2x + y +3z = -1&(2)\\
+	2x -y -2z = -3&(3)
+\end{tabular}
+\end{center}
+Mit $(x/y/z) \in \R^3$\\
+wählen wir (2)+(3)
+\begin{eqnarray*}
+	4x + z = -4 (a)
+	\shortintertext{und (1)+3(3)}
+	7x-4z = -7 (b)
+	\shortintertext{Nun 4(a)+(b)}
+	23x = -23\\
+	\underline{x = -1}
+	\shortintertext{in (a)}
+	-4 + z = -4\\
+	\underline{z = 0}
+	\shortintertext{in (2)}
+	-2 + y = -1\\
+	\underline{y = 1}
+	\shortintertext{so wird}
+	L = \{-1/1/0\}
+	\shortintertext{dh.}
+	x = \begin{pmatrix}-1\\1\\0\end{pmatrix}
+\end{eqnarray*}
+Wir haben also das Gleichungsystem zu 
+\begin{equation*}
+\begin{vmatrix}x + 3y + 2z = 2\\
+4x + z = -4\\
+x -1 ??????
+\end{vmatrix}
+\end{equation*}
+umgeformt und damit die gewünschte Matrix
+\begin{equation*}
+A^x =
+\begin{pmatrix}
+1 & 3 & 2\\
+0 & 4 & 1\\
+0 & 0 & 1
+\end{pmatrix}
+\end{equation*}
+erhalten.\\
+Die Umformunegen lassen sich auch direkt aus der \underline{augmentierten (erweiterte) Koeffizientematrix}
+umgeformt und damit die gewünschte Matrix
+\begin{equation*}
+(A/B): =
+\begin{pmatrix}
+1 & 3 & 2 &| 2\\
+2 & 1 & 3 &| -1\\
+2 & -1 & -2 & |-3
+\end{pmatrix}
+\end{equation*}
+machen.\\
+\\
+Programme zum lösen von Gleichungsystemen verlangen die augm. Matrix.
+\newpage
+\section{Homogene Gleichungssysteme}
+In $Ax = B$ ist nun $B = \vec{0}$ wie zum Beispiel
+\begin{equation*}
+	\begin{vmatrix}
+		x + 2y +2z = 0\\
+		2x + y = 2z = 0\\
+		2x + 2y + z = 0
+	\end{vmatrix}
+\end{equation*}
+Jedes homogene Gleichungssystem besitzt die triviale Lösung
+\begin{equation*}
+	x = 0, y = 0, z = 0, \text{dh.} x = \vec{0}
+\end{equation*}
+Gibt es noch andere Lösungen?\\
+Also muss das System unendlich - viele Lösungen besitzen.\\
+Dann muss also 
+\begin{equation*}
+	D = 0 \text{ \underline{und} } D_x = 0
+\end{equation*}
+sein.\\
+Wir müssen also D berechnen.
+\begin{eqnarray*}
+&
+\begin{tikzpicture}[>=stealth]
+    \matrix [%
+      matrix of math nodes,
+      column sep=1em,
+      row sep=1em
+    ] (sarrus) {%
+      1 & 2 & 2 & 1 & 2 \\
+      2 & 1 & 2 & 2 & 1 \\
+      2 & 2 & 1 & 2 & 2 \\
+    };
+
+    \path ($(sarrus-1-1.north west)-(0.5em,0)$) edge ($(sarrus-3-1.south west)-(0.5em,0)$)
+          ($(sarrus-1-3.north east)+(0.5em,0)$) edge ($(sarrus-3-3.south east)+(0.5em,0)$)
+          (sarrus-1-1)                          edge            (sarrus-2-2)
+          (sarrus-2-2)                          edge[->]        (sarrus-3-3)
+          (sarrus-1-2)                          edge            (sarrus-2-3)
+          (sarrus-2-3)                          edge[->]        (sarrus-3-4)
+          (sarrus-1-3)                          edge            (sarrus-2-4)
+          (sarrus-2-4)                          edge[->]        (sarrus-3-5)
+          (sarrus-3-1)                          edge[dashed]    (sarrus-2-2)
+          (sarrus-2-2)                          edge[->,dashed] (sarrus-1-3)
+          (sarrus-3-2)                          edge[dashed]    (sarrus-2-3)
+          (sarrus-2-3)                          edge[->,dashed] (sarrus-1-4)
+          (sarrus-3-3)                          edge[dashed]    (sarrus-2-4)
+          (sarrus-2-4)                          edge[->,dashed] (sarrus-1-5);
+
+    \foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
+    \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
+ \end{tikzpicture}\\
+&= 1 + 8 + 8 -4 -4 -4 = 5
+\end{eqnarray*}
+Also besitzt das System nur die triviale Lösung.\\
+\\ 
+Bei 
+\begin{center}
+	\begin{tabular}{l|l}
+		x + 2y + z = 0 & (1)\\
+		5x + 3y -2z = 0 & (2)\\
+		3x - y - 4z = 0 & (3)
+	\end{tabular}
+\end{center}
+Ist
+
+\begin{eqnarray*}
+&
+\begin{tikzpicture}[>=stealth]
+    \matrix [%
+      matrix of math nodes,
+      column sep=1em,
+      row sep=1em
+    ] (sarrus) {%
+      1 & 2 & 1 & 1 & 2 \\
+      5 & 3 & 2 & 5 & 3 \\
+      3 & 1 & 4 & 3 & 1 \\
+    };
+
+    \path ($(sarrus-1-1.north west)-(0.5em,0)$) edge ($(sarrus-3-1.south west)-(0.5em,0)$)
+          ($(sarrus-1-3.north east)+(0.5em,0)$) edge ($(sarrus-3-3.south east)+(0.5em,0)$)
+          (sarrus-1-1)                          edge            (sarrus-2-2)
+          (sarrus-2-2)                          edge[->]        (sarrus-3-3)
+          (sarrus-1-2)                          edge            (sarrus-2-3)
+          (sarrus-2-3)                          edge[->]        (sarrus-3-4)
+          (sarrus-1-3)                          edge            (sarrus-2-4)
+          (sarrus-2-4)                          edge[->]        (sarrus-3-5)
+          (sarrus-3-1)                          edge[dashed]    (sarrus-2-2)
+          (sarrus-2-2)                          edge[->,dashed] (sarrus-1-3)
+          (sarrus-3-2)                          edge[dashed]    (sarrus-2-3)
+          (sarrus-2-3)                          edge[->,dashed] (sarrus-1-4)
+          (sarrus-3-3)                          edge[dashed]    (sarrus-2-4)
+          (sarrus-2-4)                          edge[->,dashed] (sarrus-1-5);
+
+    \foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
+    \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
+ \end{tikzpicture}\\
+&= -12 -12 -5 + 40 -2 -9\\
+&= 0
+\end{eqnarray*}
+Also besitzt das System unendlich viele Lösungen.\\
+\\
+Mit dem Gaussalgoritmus wird\\
+2(1) + (2)
+\begin{eqnarray*}
+	7x + 7y &=& 0\\
+	x + y &=& 0 (a)
+	\shortintertext{4(1)+(3)}\\
+	7x + 7x &=& 0 (b)
+	\shortintertext{also sind}
+	(1/-1),(2/-2)\ldots(-7/7)\ldots
+	\shortintertext{Lösungen.}
+	\shortintertext{also}
+	x &=& -y
+	\shortintertext{in (1)}
+	-y + 2y + z &=& 0\\
+	y + z &=& 0\\
+	z &=& -y
+	\shortintertext{Damit wird}
+	(-y/y/-y) &\text{ für }& y \in \R
+	\shortintertext{eine Lösung.}
+	\shortintertext{Dafür schreiben wir}
+	x &=& \alpha\begin{pmatrix}-1\\1\\-1\end{pmatrix}, \alpha \in \R
+\end{eqnarray*}
+eine Lösung.\\
+Dafür schrieben wir
+\begin{myexample}
+\begin{eqnarray*}
+	\begin{tabular}{|l|l}
+		2x + 3y + 4z = 0 & (1)\\
+		x + 3 - z = 0& (2)\\
+		4x + 9y + 2z = 0 & (3)
+	\end{tabular}\\
+	\\
+\begin{tikzpicture}[>=stealth]
+    \matrix [%
+      matrix of math nodes,
+      column sep=1em,
+      row sep=1em
+    ] (sarrus) {%
+      2 & 3 & 4 & 2 & 3 \\
+      1 & 3 & -1 & 1 & 3 \\
+      4 & 9 & 2 & 4 & 9 \\
+    };
+    \path ($(sarrus-1-1.north west)-(0.5em,0)$) edge ($(sarrus-3-1.south west)-(0.5em,0)$)
+          ($(sarrus-1-3.north east)+(0.5em,0)$) edge ($(sarrus-3-3.south east)+(0.5em,0)$)
+          (sarrus-1-1)                          edge            (sarrus-2-2)
+          (sarrus-2-2)                          edge[->]        (sarrus-3-3)
+          (sarrus-1-2)                          edge            (sarrus-2-3)
+          (sarrus-2-3)                          edge[->]        (sarrus-3-4)
+          (sarrus-1-3)                          edge            (sarrus-2-4)
+          (sarrus-2-4)                          edge[->]        (sarrus-3-5)
+          (sarrus-3-1)                          edge[dashed]    (sarrus-2-2)
+          (sarrus-2-2)                          edge[->,dashed] (sarrus-1-3)
+          (sarrus-3-2)                          edge[dashed]    (sarrus-2-3)
+          (sarrus-2-3)                          edge[->,dashed] (sarrus-1-4)
+          (sarrus-3-3)                          edge[dashed]    (sarrus-2-4)
+          (sarrus-2-4)                          edge[->,dashed] (sarrus-1-5);
+
+    \foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
+    \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
+ \end{tikzpicture}\\
+ = 12 -12 +36 -6 + 18 -48 = 0\\
+	\shortintertext{(1)-(2)}
+	x + 5z &=& 0 (a)
+	\shortintertext{3(1)-(3)}
+	2x + 10z &=& 0\\
+	x + 5z&=& 0 (b)
+	\shortintertext{also}
+	x &=& -5z 
+	\shortintertext{in (2)}
+	-5z + 3y -z &=& 0\\
+	-6z + 3y &=& 0\\
+	3y &=& 6z \\
+	y &=& 2z
+	\shortintertext{ist}
+	z &=& \beta
+	\shortintertext{so wird}
+	x &=& -5\beta \text{ und } y = 2\beta
+	\shortintertext{also ist}
+	x &=& \beta \begin{pmatrix}-5\\2\\1\end{pmatrix}, \beta \in \R
+\end{eqnarray*}
+der Lösungsvektor.
+\end{myexample}
+\noindent
+Überlegen wir geometrisch, so ist jede der Gleichungen des Gleichungssystems, die Gleichung einer (Hyper-) Ebene durch den Ursprung.\\
+Existieren beliebeig viele Lösungen, so kann entweder
+\begin{itemize}
+	\item
+		Ein Ebenenbüschel
+		\begin{center}
+	 		\includegraphics[width=0.8\textwidth]{imgs/ebenenbueschel.png}
+		\end{center}
+	\item
+		oder eine Schnittgerade (wenn 2 der 3 Ebenen identisch sind)
+	\item
+		oder eine Ebene (wenn alle 3 Ebenen identisch sind)
+\end{itemize}
+existieren.
+\begin{myexample}
+	\begin{enumerate}
+	\item
+	\begin{tabular}{|l|l}
+		4x - y + z = 3 & (1)\\
+		2x + 2y -z = 1 & (2)\\
+		4x + 4y -2z = 2 & (3)
+	\end{tabular}\\
+	\\
+	(3) ist ein vielfaches von (2), also sind dies die Gleichungen derselbenn Ebene. Damit ist die Schnittgerade der 2 Ebenen (1) und (2) die Lösung des Systems.\\
+	\\
+	Mit
+	\begin{eqnarray*}
+		y &=& \sigma
+		\shortintertext{wird}
+		&&\begin{tabular}{|l|l}
+			$4x -\sigma + z = 3$&(a)\\
+			$2x + 2\sigma -z = 1$&(b)
+		\end{tabular}
+		\shortintertext{(a)+(b)}
+		6x + \sigma &=& 4\\
+		6x &=& 4 -\sigma\\
+		x &=& \frac{2}{3}-\frac{x}{6}
+		\shortintertext{damit}
+		\frac{4}{3} - \frac{\sigma}{3}+ 2\sigma -z &=& 1\\
+		4 -\sigma + 6\sigma - 3z &=& 3\\
+		5\sigma + 1 &=& 3z\\
+		z &&= \frac{1}{3} + \frac{5}{3}\sigma
+		\shortintertext{also}
+		x &=& \begin{pmatrix}\frac{2}{3}\\0\\\frac{1}{3}\end{pmatrix}  + \sigma \begin{pmatrix}-\frac{1}{6}\\1\\\frac{5}{3}\end{pmatrix} , \sigma \in \R
+	\end{eqnarray*} 
+		\item
+			\begin{eqnarray*}
+				&&\begin{tabular}{|l|l}
+					x - 2y + z = 0 & (1)\\
+					2x -y -z = 0 & (2)\\
+					x + y -2z = 0 & (3)
+				\end{tabular}\\
+				\\
+				&&\begin{tabular}{|l|l}
+					2x + 3y + 4z = 0 & (1)\\
+					x + 3 - z = 0& (2)\\
+					4x + 9y + 2z = 0 & (3)
+				\end{tabular}\\
+				\\
+				&&
+				\begin{tikzpicture}[>=stealth]
+    				\matrix [%
+     				 matrix of math nodes,
+     				 column sep=1em,
+     				 row sep=1em
+   				 ] (sarrus) {%
+      				1 & -2 & 1 & 1 & -2 \\
+      				2 & -1 & -1 & 2 & -1 \\
+      				1 & 1 & 2 & 1 & 1 \\
+   				 };
+
+    \path ($(sarrus-1-1.north west)-(0.5em,0)$) edge ($(sarrus-3-1.south west)-(0.5em,0)$)
+          ($(sarrus-1-3.north east)+(0.5em,0)$) edge ($(sarrus-3-3.south east)+(0.5em,0)$)
+          (sarrus-1-1)                          edge            (sarrus-2-2)
+          (sarrus-2-2)                          edge[->]        (sarrus-3-3)
+          (sarrus-1-2)                          edge            (sarrus-2-3)
+          (sarrus-2-3)                          edge[->]        (sarrus-3-4)
+          (sarrus-1-3)                          edge            (sarrus-2-4)
+          (sarrus-2-4)                          edge[->]        (sarrus-3-5)
+          (sarrus-3-1)                          edge[dashed]    (sarrus-2-2)
+          (sarrus-2-2)                          edge[->,dashed] (sarrus-1-3)
+          (sarrus-3-2)                          edge[dashed]    (sarrus-2-3)
+          (sarrus-2-3)                          edge[->,dashed] (sarrus-1-4)
+          (sarrus-3-3)                          edge[dashed]    (sarrus-2-4)
+          (sarrus-2-4)                          edge[->,dashed] (sarrus-1-5);
+
+    \foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
+    \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
+\end{tikzpicture}\\
+		&&= 2 + 2 + 2 -8 + 1 + 1= 0
+		\end{eqnarray*}
+Keine der Gleichungen ist ein vielfaches einer anderen. Also bilden die 3 Ebenen ein Ebenenbüschel und die gemeinsame Schnittgerade ist die Lösung des Systems.
+Ist $x=\alpha$, so wird
+\begin{eqnarray*}
+\alpha - 2y+z&=&0\\
+2\alpha -y-z&=&0
+\end{eqnarray*}
+Addiert:
+\begin{eqnarray*}
+3\alpha - 3y &=& 0\\
+y &=& \alpha
+\end{eqnarray*}
+eingesetzt in (1):
+\begin{eqnarray*}
+\alpha - 2\alpha + z &=& 0\\
+z &=& \alpha
+\end{eqnarray*}
+Wir müssen nicht noch (1) und (3) oder (2) und (3) betrachten, da wir wissen, dass die Schnittgerade zu allen 3 Ebenen gehört. Also ist
+\begin{eqnarray*}
+x&=&\alpha\\
+y&=& \alpha\\
+z&=&\alpha
+\shortintertext{denn}
+s:\vec{p} = \alpha \begin{pmatrix}1\\1\\1\end{pmatrix}, \alpha \in \mathbb{R}
+\end{eqnarray*}
+\newpage
+\item
+\begin{center}
+\begin{tabular}{|l|l}
+8w-5x+7y+6z = 0&(1)\\
+w-2x+y+3z=0&(2)\\
+5w+2x+y-z=0&(3)\\
+w-3x+4y+z=0&(4)
+\end{tabular}
+\end{center}
+Ist $D=0$? Die Regel von Sarrus ist nicht anwendbar und das Berechnen von D führt zu einer Umformung, so dass Oberhalb und Unterhalb der Hauptdiagonale lauter 0 entstehen. Dies machen wir aber auch mit dem Gauss-Algorithmus beim Lösen eines Gleichungssystems.
+\begin{eqnarray*}
+(1)-2(2): 6w-x+5y&=&0 |(I)\\
+(2)+3(3): 16w+4x+4y&=&0 |(II)\\
+(3)+(4): 6w-x+5y&=&0 |(III)
+\end{eqnarray*}
+\begin{eqnarray*}
+4(I) +(II): 40w+24y&=&0\\
+5w+3y&=&0 |(a)
+\end{eqnarray*}
+\begin{eqnarray*}
+(II) +4(III): 40w+24y&=&0\\
+5w+3y&=&0 |(b)
+\end{eqnarray*}
+Das System hat nicht nur die triviale Lösung, da a und b gleich sind. Somit ist eine Variable als Parameter wählbar, z.B. das w. Ist w=$\beta$, so wird $y=-\frac{5\beta}{3}.$\\\\
+Mit (I)  wird 
+\begin{eqnarray*}
+6\beta-x+5(-\frac{5\beta}{3}) &=& 0\\
+18\beta - 3x -25\beta &=& 0\\
+-7\beta &=& 3x\\
+x&=&-\frac{7\beta}{3}
+\shortintertext{In (4): }
+\beta+7\beta - \frac{20\beta}{3}+z &=& 0\\
+24\beta - 20\beta + 3z &=& 0\\
+3z &=&-4\beta\\
+z &=& -\frac{4\beta}{3}
+\end{eqnarray*}
+so wird
+\begin{eqnarray*}
+x =  \begin{pmatrix}w\\x\\y\\z\end{pmatrix}  &=& \beta \begin{pmatrix}1\\-\frac{7}{3}\\-\frac{5}{3}\\-\frac{4}{3}\end{pmatrix}\\
+\to x&=& \beta \begin{pmatrix}-3\\7\\5\\4\end{pmatrix}; \beta \in \mathbb{R}
+\end{eqnarray*}
+	\end{enumerate}
+\end{myexample}
+\subsection{Inverse Matrix}
+Das Berechnen einer inversen Matrix mit Hilfe der allgemeinen Lösung ist kompliziert. Wir haben aber überlegt, dass eine quadratische Matrix M zu einer linearen Abbindung
+\begin{equation*}
+\vec{p'} = M\vec{p}
+\end{equation*}
+gehört. Die inverse Matrix $M^{-1}$ gehört dann zur Umkehrabbildung
+\begin{equation*}
+\vec{p} = M^{-1}\cdot\vec{p'}
+\end{equation*}
+Also berechnen wir $M^{-1}$ am einfachsten mit dem Bestimmen der Vorschrift der Umkehrabbildung.
+Ist 
+\begin{equation*}M = \begin{pmatrix}2&-1&1\\1&-1&2\\2&0&-1\end{pmatrix}\end{equation*}
+, so lautet die Abbildungsvorschrift
+\begin{equation*}
+\begin{tabular}{|l|l}
+	x'=2x-y+z&(1)\\
+	y'=x-y+2z&(2)\\
+	z'=2x-z&(3)
+\end{tabular}
+\end{equation*}
+und wir suchen x,y und z.
+\begin{eqnarray*}
+(1)-(2): x'-y'&=&x-z\\
+(3): z'&=&2x-z
+\end{eqnarray*}
+also
+\begin{eqnarray*}
+x'-y'-z'&=&-x\\
+x&=&-x'+y'+z'
+\end{eqnarray*}
+in (3):
+\begin{eqnarray*}
+z'&=&2(-x'+y'+z')-z\\
+z'&=& -2x'+2y'+2z'-z\\
+z&=& -2x' + 2y' + z'
+\end{eqnarray*}
+in (1):
+\begin{eqnarray*}
+x'&=&-2x'+2y'+2z'-y-2x'+2y'+z'\\
+y&=& -5x'+4y'+3z'
+\end{eqnarray*}
+Somit ist die Vorschrift für die Umkehrabbildung
+\begin{eqnarray*}
+x&=&-x'+y'+z'\\
+y&=& -5x'+4y'+3z'\\
+z&=& -2x'+2y'+z'
+\end{eqnarray*}
+und damit
+\begin{equation*}
+M^{-1} = \begin{pmatrix}-1&1&1\\-5&4&3\\-2&2&1\end{pmatrix}
+\end{equation*}\newpage
+\subsection{Eigenvektoren und Eigenwert}
+\begin{mydef}
+	Ein Eigenvektor einer Abbildung ist ein vom Nullvektor verschiedener Vektor, dessen Richtung durch die Abbildung nicht verändert wird. Seine Länge darf sich ändern.
+\end{mydef}
+\noindent
+Wir fragen uns, ob es bei einer linearen Abbildung, Vektoren $\vec{a} \neq \vec{o}$ gibt, die in einem Vielfachen $\lambda\vec{a}$, $\lambda \not = 0$ von sich selbst abgebildet werden.\\
+\\
+Ist die Abbildung bestimmt durch
+\begin{eqnarray*}
+	M &=& \begin{pmatrix}2&5\\4&3\end{pmatrix}
+	\shortintertext{so muss also}
+	\lambda\vec{a} &=& M\vec{a}
+	\shortintertext{sein. Somit ist}
+	\lambda E\vec{a} &=& M \vec{a}\\
+	\vec{o} &=& M\vec{a} -\lambda E \vec{a}\\
+	\vec{o} &=& (M - \lambda E)\vec{a}
+	\shortintertext{Mit M wird}
+	M - \lambda E &=& \begin{pmatrix}2&5\\4&3\end{pmatrix} - \lambda \begin{pmatrix}1&0\\0&1\end{pmatrix}\\
+	&=& \begin{pmatrix}2-\lambda & 5\\4& 3-\lambda\end{pmatrix}
+	\shortintertext{Ist}
+	\vec{a} &=& \begin{pmatrix}a_1\\a_2\end{pmatrix}
+	\shortintertext{so wird}
+	(M-\lambda E)\vec{a} &=& \begin{pmatrix}(2-\lambda)a_1+5a_2\\4_a1+(3-\lambda)a_2\end{pmatrix}
+	\shortintertext{Mit}
+	\vec{o} &=& \begin{pmatrix}0\\0\end{pmatrix}
+\end{eqnarray*}
+ist somit
+\begin{equation*}
+	\begin{vmatrix}
+		(2-\lambda)a_1 - 5a_2 = 0\\ 
+		4a_1+(3-\lambda)a_2 = 0
+	\end{vmatrix}
+\end{equation*}
+\bigskip
+Dies ist ein homogenes Gleichugssystem und es besitzt nur dann von $\vec{o}$ verschiedene Lösungen, wenn
+\begin{equation*}
+	D = 0
+\end{equation*}
+ist (Siehe Kapitel Homogene Gleichunssysteme)\\
+Also mit
+\begin{eqnarray*}
+	D &=& \begin{vmatrix}2-\lambda & 5\\4& 3-\lambda\end{vmatrix}\\
+	&=&(2-\lambda)(3-\lambda) -20\\
+	&=&6+\lambda^2 -5\lambda -20\\
+	&=& \lambda^2 -5\lambda -14
+	\shortintertext{muss}
+	\lambda^2 -5\lambda -14 &=& 0
+	\shortintertext{sein}
+	\shortintertext{somit} 
+	(\lambda -7)(\lambda +2) &=& 0\\
+	\lambda_1 &=& 7 , \lambda_2 = 2
+\end{eqnarray*}
+\begin{mydef}
+	Ist A eine (n,n) - Matrix, \\
+	$\vec{v} \not = \vec{o}$ und $(A-\lambda E)\vec{v} = \vec{0}$,\\
+	so
+	\begin{itemize}
+		\item
+			heisst $P(\lambda):= \text{Det}(A-\lambda E)$\\
+			das \underline{charakteristische Polynom} von A
+		\item
+			heissen die nichttrivialen Lösungen von $P(\lambda) = 0$\\
+			die \underline{Eigenwerte} $\lambda_1,\lambda_2,\ldots,\lambda_4$ der Matrix A
+		\item
+			heissen $\lambda \vec{v}$  die \underline{Eigenvektoren (eigenvectors)} der Matrix A.
+	\end{itemize}
+\end{mydef}
+\noindent
+Im Beispiel sind also $\lambda_1 = 7$ und $\lambda_2 =  -2$ die Eigenwerte von M.\\
+\\
+Mit $\lambda_1$ wird
+\begin{eqnarray*}
+	\begin{tabular}{|l|l}
+		$-5a_1+5a_2 = 0$&(1)\\
+		$4a_1 - 4a_2 = 0 $&(2)
+	\end{tabular}
+\end{eqnarray*}
+\begin{eqnarray*}
+	\shortintertext{und mit (1) wird}
+	a_1 &=& a_2
+	\shortintertext{und ebenso wird}
+	a_1 &=& a_2 
+	\shortintertext{mit (2)}
+	\shortintertext{Also sind}
+\end{eqnarray*}
+\begin{equation*}
+	\begin{pmatrix}1\\1\end{pmatrix},\begin{pmatrix}2\\2\end{pmatrix},\ldots,			\begin{pmatrix}-5\\-5\end{pmatrix}\ldots
+\end{equation*}
+\begin{eqnarray*}
+	\shortintertext{die Eigenvektoren. Dafür schreiben wir}
+	\vec{a} &=& \alpha\begin{pmatrix}1\\1\end{pmatrix}, \alpha \in \R \backslash \{0\}
+	\shortintertext{Mit $\lambda_2$ wird}
+\end{eqnarray*}
+\begin{eqnarray*}
+	\begin{tabular}{|l|l}
+		$4a_1+ 5a_2 = 0$&(3)\\
+		$4a_1 + 5a_2 = 0 $&(4)
+	\end{tabular}
+\end{eqnarray*}
+\begin{eqnarray*}
+	\shortintertext{also}
+	a_1 &=& -\frac{5}{4}a_2
+	\shortintertext{z.Bsp.}
+	\vec{a} &=& \beta\begin{pmatrix}-5\\4\end{pmatrix}, \vec{a}\begin{pmatrix}10\\-8\end{pmatrix}, \ldots
+	\shortintertext{wofür wir}
+	\vec{a} &=&  \beta\begin{pmatrix}-5\\4\end{pmatrix}, \beta \in \R \backslash \{0\}
+	\shortintertext{schreiben.}
+	\shortintertext{Es sind also}
+	\vec{a_1} &=& \alpha\begin{pmatrix}1\\1\end{pmatrix}\\
+	\vec{a_2} &=& \alpha\begin{pmatrix}-5\\4\end{pmatrix}, \alpha \in \R \backslash \{0\}
+	\shortintertext{die Eigenvektoren der Matrix}
+	M &=& \begin{pmatrix}2&5\\4&3\end{pmatrix}
+\end{eqnarray*}
+Häufig werden die normierten Vektoren als Resultat angegeben
+\begin{eqnarray*}
+	\vec{a}_{norm} &=& \frac{\vec{a}}{|\vec{a}|}
+	\shortintertext{also}
+	\vec{a_1} &=& \alpha \begin{pmatrix}\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}\end{pmatrix} = \frac{\alpha}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}, \alpha \in \R \backslash \{0\}\\
+	\vec{a_2} &=& \frac{\alpha}{\sqrt{41}}\begin{pmatrix}-5\\4\end{pmatrix}, \alpha \in \R \backslash \{0\}
+\end{eqnarray*}
+\newpage
+\begin{myexample}
+	Suche die Eigenwerte und die Eigenvektoren von $A = \begin{pmatrix}3&4\\1&3\end{pmatrix}$\\
+	\\
+	Mit
+	\begin{eqnarray*}
+		A - \lambda E &=& \begin{pmatrix}3-\lambda & 4 \\ 1 & 3-\lambda\end{pmatrix}
+		\shortintertext{und}
+		\vec{v} &=& \begin{pmatrix}x\\y\end{pmatrix}
+		\shortintertext{wird}
+		&&\begin{vmatrix}
+			(3-\lambda)x + 4y = 0\\
+			x + (3 -  \lambda)y = 0
+		\end{vmatrix}
+		\shortintertext{und}
+		D &=& \begin{vmatrix}
+			3-\lambda & 4\\
+			1 & 3-\lambda
+		\end{vmatrix}\\
+		&= &(3 - \lambda)^2 -4\\
+		&=& 9 + \lambda^2 -6 \lambda -4\\
+		&=& \lambda^2 -6 \lambda + 5\\
+		D &=& 0
+		\shortintertext{somit}
+		0 &=& (\lambda -1)(\lambda -5)
+		\shortintertext{also sind die Eigenwerte}
+		\lambda_1 &=& 1\\
+		\lambda_2 &=& 5
+		\shortintertext{Mit $\lambda_1$ wird}
+		&&\begin{vmatrix}
+			2x + 4y = 0\\
+			x + 2y = 0
+		\end{vmatrix}
+		\shortintertext{also}
+		x &=& -2y 
+		\shortintertext{und so}
+		\vec{v_1} &=& \alpha\begin{pmatrix}-2 \\1\end{pmatrix}, \alpha \in \R \backslash \{0\}
+		\shortintertext{Mit}
+		\lambda_2 &=& 5
+		\shortintertext{wird}
+		&&\begin{vmatrix}
+			-2x + 4y = 0\\
+			x -2y = 0
+		\end{vmatrix}
+		\shortintertext{also}
+		x &=& 2y\\
+		\vec{v_2} &=& \beta \begin{pmatrix}2\\1\end{pmatrix}, \beta \in \R \backslash \{0\}
+ 	\end{eqnarray*}
+\end{myexample}
+\chapter{Komplexe Zahlen}
+In $\R$ sind nicht alle Gleichungen lösbar. Wie z.Bsp.
+\begin{equation*}
+	x^2 = -2
+\end{equation*}
+Deshalb erweitern wir den Zahlenbereich mit $\iu$
+\begin{mydef}	
+	Die Zahl $\iu$ mit $\iu^2 = -1$ heisst \underline{imaginäre Einheit}.
+\end{mydef}
+\noindent
+So wird nun
+\begin{eqnarray*}
+	x^2 &=& -2 = 2\iu^2\\
+	x_{1,2} &=& \pm \sqrt{2\iu^2} = \pm \sqrt{2}\iu
+\end{eqnarray*}
+Um
+\begin{eqnarray*}
+	x^2 + 8x + 16 &=& -9
+	\shortintertext{zu lösen, formen wir nun zu}
+	(x+4)^2 &=& 9\iu^2\\
+	x + 4 &=& \pm 3\iu\\
+	x_1 &=& -4 + 3\iu\\
+	x_2 &=& -4 - 3 \iu
+\end{eqnarray*}
+\begin{mydef}
+	Die Menge
+	\begin{equation*}
+		\C: = \{z | z = a+b\iu, a\in \R \land b \in \R\}
+	\end{equation*}
+	heisst \underline{Menge der komplexen Zahlen}
+\end{mydef}
+\noindent
+Die Zahl
+\begin{equation*}
+	z = a + b\iu
+\end{equation*}
+besitzt den \underline{Realteil Re(z)} = a und den \underline{Imaginaärteil Im(z)} = b.\\
+\newpage
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/komplexeZahlBestimmt.png}
+\end{center}
+Komplexe Zahlen werden in der Gausschen Zahlenebene (C.F.Gauss, 1777 bis 1855, Göttingen) dargestellt.
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/gaussZahlenebene.png}
+\end{center}
+\newpage
+\begin{myexample}
+	\begin{enumerate}
+		\item
+		\begin{eqnarray*}
+			\iu^3 &=& ?\\
+			\iu^3 &=& \iu^2 \cdot \iu = (-1)\iu = -\iu\\
+			\\
+			\iu^4 &=& ?\\
+			\iu^4 &=& \iu^2 \cdot \iu ^2 = (-1)(-1) = 1\\
+			\\
+			\iu^5 &=& ?\\
+			\iu^5 &=& \iu^4 \cdot \iu = (1)\iu = \iu\\
+			\\
+			\iu^6 &=& ?\\
+			\iu^6 &=& \iu^4 \cdot \iu^2 = -1\\
+			\\
+			\iu^7 &=& ?\\
+			\iu^7 &=& \iu^6 \cdot \iu = -\iu\\
+			\\
+			\iu^8 &=& ?\\
+			\iu^8 &=& \iu^4 \cdot \iu^4 = 1
+		\end{eqnarray*}
+		\item
+		\begin{eqnarray*}
+			z^2 + 2z + 3 &=& 0\\
+			z^2 + 2z &=& -3 \text{| wir ergänzen quadratisch + 1}\\
+			z^2 + 2z  + 1 = -2\\
+			(z+1)^2 &=& -2\\
+			(z+1)^2 &=& 2\iu^2\\
+			z+1 &=& \pm \sqrt{2}\iu\\
+			z_1 &=& -1 +\sqrt{2}\iu, z_2 = -1 -\sqrt{2}\iu
+		\end{eqnarray*}
+		\item
+		\begin{eqnarray*}
+			z^3 + 1 &=& 0\\
+			z^3 &=& -1\\
+			z &=& -1
+		\end{eqnarray*}
+		Der \underline{Fundamantalsatz der Algebra} sagt, dass jede Gleichung n. Grades, im Komplexen n Lösungen besitzt.\\
+		\\
+		Also muss $z^3+1$ in Faktoren zerlegbar sein.
+		\begin{eqnarray*}
+			z^3 + 1 &=& (z+1)(z^2+az+1)\\
+			&=& z^3 + az^2 + z + z^2 + az +1\\
+			&=& z^3 + 1 + (a+1)z^2 + (a+1)z
+			\shortintertext{also muss}
+			a &=& -1
+			\shortintertext{sein!}
+			\shortintertext{somit}
+			(z^3+1) &=& (z+1)(z^2 - z + 1)
+			\shortintertext{analog}
+			(z^3 -1 ) &=& (z-1)(z^2 + z + 1)
+			\shortintertext{aus}
+			z^3 + 1 &=& 0
+			\shortintertext{folgt}
+			(z+1)(z^2 - z + 1) &=& 0
+			\shortintertext{also}
+			z + 1 = 0&\lor& z^2 -z + 1 = 0\\
+			\shortintertext{wir finden}
+			z_1 &=& -1\\
+			\shortintertext{weiter finden wir}
+			z^2 - z  + \frac{1}{4} &=& -1 + \frac{1}{4}\\
+			(z - \frac{1}{2})^2 &=& -\frac{3}{4}\\
+			(z - \frac{1}{2})^2 &=& \frac{3\iu^2}{4}\\
+			z - \frac{1}{2} &=& \pm \frac{\iu\sqrt{3}}{2}\\
+			z_2 &=& \frac{1}{2} + \frac{\iu\sqrt{3}}{2}\\
+			z_3 &=& \frac{1}{2} -  \frac{\iu\sqrt{3}}{2}\\
+		\end{eqnarray*}
+		\newpage
+		\item
+		\begin{eqnarray*}
+			z^4 &=& 1\\
+			z^2 &=& \pm 1\\
+			z^2 =1 &\lor& z^2 = -1\\
+			\shortintertext{wir finden}
+			z &=& \pm 1\\
+			\shortintertext{und}
+			z^2 &=& \iu^2\\
+			z &=& \pm \iu
+			\shortintertext{Wir haben also die Lösungen}
+			&&z_1 = 1, z_2 = -1 z_3 = \iu, z_4 = -\iu
+			\shortintertext{gefunden.}
+		\end{eqnarray*}
+		\begin{center}
+	 		\includegraphics[width=0.8\textwidth]{imgs/komplexeZahlenAufgabe4.png}
+		\end{center}
+	\end{enumerate}
+\end{myexample}
+\newpage
+\noindent
+\section{Division}
+Dividieren wir zwei komplexe Zahlen
+\begin{equation*}
+	\frac{3+2\iu}{4-3\iu}
+\end{equation*} 
+so wollen wir das resultat in der Form $a + b\iu$.\\
+Da
+\begin{eqnarray*}
+	(x-y)(x+y) &=& x^2 -y^2
+	\shortintertext{erweitern wir mit $4+3\iu$:}
+	\frac{3+2\iu}{4-3\iu}\cdot\frac{4+3\iu}{4+3\iu} &=&\frac{12+17\iu+6\iu^2}{4^2-(3\iu)^2}\\
+	&=& \frac{12-6+17\iu}{16+9}\\
+	&=& \frac{6+17\iu}{25}\\
+	&=& \frac{6}{25} + \frac{17\iu}{25} 
+\end{eqnarray*}
+\begin{mydef}
+	Ist 
+	\begin{eqnarray*}
+		z = a + b\iu
+		\shortintertext{so heisst}
+		\overline{z}: a-b\iu
+	\end{eqnarray*}
+	die zu z \underline{konjugiert komplexe} Zahl.\\
+\end{mydef}
+\noindent
+Beim Dividieren müssen wir also mit der konj.-komplexen Zahl den Nenner erweitern.
+\begin{eqnarray*}
+	\frac{1+2\iu}{2+3\iu}\cdot\frac{2-3\iu}{2-3\iu} &=& \frac{2+\iu-6\iu^2}{4-9\iu^2}\\
+	&=& \frac{2+\iu+6}{4+9}\\
+	&=& \frac{8+\iu}{13}\\
+	&=& \frac{8}{13}+\frac{\iu}{13}
+\end{eqnarray*}
+Um
+\begin{eqnarray*}
+	2z+\iu\overline{z} &=& 5\iu -11, z \in \C
+	\shortintertext{zu lösen, schreiben wir}
+	z &=& a+b\iu
+	\shortintertext{und}
+	\overline{z} &=& a - b\iu
+	\shortintertext{und erhalten}
+	2(a+b\iu) + \iu(a-b\iu) &=& 5\iu -11\\
+	2a + 2b\iu + a\iu + b &=& 5\iu -11\\
+	2a +2b + \iu(a+b) &=& 5\iu -11
+\end{eqnarray*}
+also muss
+\begin{center}
+	\begin{tabular}{|l|l}
+		2a + b = -11&(1)\\
+		a + 2b = 5&(2)
+	\end{tabular}
+\end{center}
+sein.
+\begin{eqnarray*}
+	\shortintertext{2(1)-(2):}
+	3a &=& -27\\
+	a &=& -9
+	\shortintertext{in (1):}
+	-18 + b &=& 11\\
+	b &=& 7
+	\shortintertext{Also ist}
+	z &=& -9 + 7\iu
+\end{eqnarray*}
+\newpage
+\noindent
+\section{Potenzieren}
+Sollen wir $(1-\iu)^{10}$ berechnen, so ist das Berechnen mit dem pascalschen Dreieck mühsam. Wir suchen deshalb einen anderen Weg.\\
+Eine komplexe Zahl $z$ ist auch bestimmt, wenn
+\begin{itemize}
+	\item
+		der \underline{Betrag} $|z|$
+	\item
+		das \underline{Argument} $\alpha$
+\end{itemize}
+bekannt sind.\\
+\\
+Es ist 
+\begin{eqnarray*}
+	|z| &=& \sqrt{a^2+b^2}\\
+	\alpha &=& arg z = \arctan(\frac{b}{a})
+	\shortintertext{Ist}
+	z &=& 2 + 2\iu
+	\shortintertext{so ist}
+	|z| &=&  \sqrt{2^2 + 2^2} = \sqrt{8} = 2 \sqrt{2}\\
+	arg z &=& \arctan({\frac{2}{2}}) = \arctan{1}\\
+	&=& 45^{\circ}	
+	\shortintertext{Ist}
+	z &=& \sqrt{3} -\iu 
+	\shortintertext{so ist}
+	|z| &=& \sqrt{3+1} = \sqrt{4} = 2\\
+	arg z &=& \arctan(-\frac{1}{\sqrt{3}})\\
+	&=&\arctan({\frac{\sqrt{3}}{3}})\\
+	\to \alpha_1 &=& -30^{\circ} + 180^{\circ} = 150^{\circ}\\
+	\alpha_2 &=& 150^{\circ} + 180^{\circ} = 330^{\circ}
+	\shortintertext{z ist im 4. Quadranten, also ist}
+	arg z &=& 330^{\circ}
+\end{eqnarray*}
+\begin{mydef}
+	Ist z durch arg z und |z| bestimmt, so nennen wir dies die \underline{Polarform} von z.
+\end{mydef}
+\noindent
+Kennen wir die Polarform, so 
+\begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/polarform.png}
+\end{center}
+ist der Realteil
+\begin{eqnarray*}
+	a &=& |z|\cos{\alpha}
+	\shortintertext{und der imaginärteil}
+	b &=& |z|\sin{\alpha}
+	\shortintertext{also}
+	z &=& a+b\iu \\
+	&=& |z|\cos{\alpha} + \iu|z|\sin{\alpha}\\
+	&=& |z|(\cos{\alpha}+\iu\sin{\alpha})\\
+	&=& |z|cis{\alpha}
+\end{eqnarray*}
+So ist
+\begin{eqnarray*}
+	2 + 2\iu = 2\sqrt{2}cis{45^{\circ}}\\
+	\sqrt{3} -\iu = 2cis{330^{\circ}}
+\end{eqnarray*}
+Wir nennen $|z|cis{\alpha}$ auch die Polarform von z.\\
+Ist
+\begin{eqnarray*}
+	z &=& |z|cis{\alpha}, w = |w|cis{\beta}
+	\shortintertext{so wird}
+	z\cdot w &=& |z|(\cos{\alpha} + \iu\sin{\alpha})|w|(\cos{\beta}+\iu\sin{\beta})\\
+	&=& |z||w|(\cos{{\alpha}\cos{\beta}+\iu\cos{\alpha}\sin{\beta}} + \iu\sin{\alpha}\cos{\beta}+ \iu^2\sin{\alpha}\sin{\beta}\\
+	&=& |z||w|(\cos{\alpha}\cos{\beta}-\sin{\alpha}\sin{\beta}+\iu(\sin{\alpha}\cos{\beta}+\sin{\beta}\cos{\alpha})\\
+	&=& |z||w|(\cos(\alpha+\beta)+\iu\sin(\alpha+\beta))
+\end{eqnarray*}
+also
+\begin{mathbox}
+	\begin{equation*}
+		|z|cis\alpha \cdot |w|cis\beta = |z||w|cis(\alpha+\beta)
+	\end{equation*}
+\end{mathbox}
+\noindent
+\bigskip
+Nun ist also
+\begin{eqnarray*}
+	z^n &=& (|z|cis\alpha)^n\\
+	&=& |z|^n cis(\alpha+\alpha+\ldots+\alpha)\\
+	&=& |z|^n cis(n\alpha)
+\end{eqnarray*}
+Damit wird
+\begin{eqnarray*}
+	&&(1-\iu)^{10}
+	\shortintertext{mit}
+	z &=& 1-\iu \to |z| = \sqrt{2}\\
+	\alpha &=& \arctan{(-1)}\\
+	\alpha_1 &=& 135^{\circ}\\
+	\alpha_2 &=& 315^{\circ}
+	\shortintertext{also}
+	z &=& \sqrt{2}cis315^{\circ}\\
+	\shortintertext{und so}
+	z^{10} &=& (\sqrt{2})^{10}cis3150^{\circ}\\
+	z^{10} &=& 32cis(3150^{\circ}\mod 360^{\circ})\\
+	&=& 32cis270^{\circ}\\
+	&=& 32(\cos270^{\circ}+\iu\sin270^{\circ}) \\
+	&=& 32(0+\iu(-1))\\
+	&=& \underline{-32\iu}
+\end{eqnarray*}
+\begin{myexample}
+	\begin{eqnarray*}	
+		&&(1+\sqrt{3}\iu)^6
+		\shortintertext{Mit}
+		z &=& \sqrt{1+\sqrt{3}\iu}
+		\shortintertext{wird}
+		|z| &=& 2\\
+		\alpha &=& \arctan(\sqrt{3})\\
+		\alpha_1 &=& 60^{\circ}\\
+		\alpha_2 &=& 240^{\circ}
+		\shortintertext{also}
+		z &=& 2cis60^{\circ}
+		\shortintertext{und so}
+		z^6 &=& 2^6cis360^{\circ}\\
+		&=& 64(\cos360^{\circ}+\iu\sin360^{\circ})\\
+		&=& 64(1+\iu \cdot 0)\\
+		&=& \underline{64}
+	\end{eqnarray*}
+\end{myexample}
+
+
+  %-------------- Kurzreferenz --------------
+ 
+ \chapter{Kurzreferenz}
+ \section{Begriffe}
+ \begin{tabularx}{\textwidth}{lX}
+ erstprojizierende Gerade & Eine Gerade mit nur einem Spurpunkt\\
+ Spurpunkt & Schnittpunkt einer Geraden mit einer Fläche\\
+ Hauptgeraden & Eine Gerade, die parallel zu einer Rissebene liegt\\
+ Rissebene & Ebene welceh auf einer Achse liegt $\pi_1$ z Achse, $\pi_2$ y Achse, $\pi_3$ x Achse\\
+ Fusspunkt & Wo Gerade eine andere Gerade trifft\\
+ Parametergleichung& Definiert vektorielle Strukturen, besitzt einen Trägerpunkt/Aufhängepunkt A, Richtumgsvektor $\vec{v}$ und einen Parameter bspw. $\lambda$ \\
+ Projiizierend & Eine Ebene, die Senkrecht zu einer Rissebene steht\\
+ Koordinatengleichung& Definiert was ein Punkt erfüllen muss um in dieser Ebene zu liegen.\\
+ Hauptebene& Ebene die parallel zu einer Rissebene liegt.\\
+ Richtungsvektor&Gibt Richtung einer Geraden an\\
+ Symmetriebene&\\
+ Koinzidenzebene& Spiegelung der Symmetriebene\\
+ Schnittgerade& Menge aller Schnittpunkte zweier Ebenen\\
+ Spurgerade/Spuren&Die Schnittgerade einer Ebene mit der Rissebene\\
+ Normalenvektor (Senkrechten, Lot)& Ein Vektor der Senkrecht zu einer Ebene steht\\
+ Einheitsmatrix&In der Einheitsmatrix sind nur 1en auf der Hauptdiagonalen\\
+ Nullmatrix& Alle Werte der Matrix sind 0, Neutrales Element\\
+ singuläre Matrix&eine nicht reguläre Matrix\\
+ reguläre Matrix&Eine quadratische Matrix M, $Det(M) \not = 0$ \\
+ Fundamentalsatz der Algebra & Der \underline{Fundamantalsatz der Algebra} sagt, das jede Gleichung n. Grades, im Komplexen n Lösungen besitzt.
+\end{tabularx}
+
+ %-------------- Anhang --------------
+ 
+ \chapter{Anhang}
+ \section{Griechisches Alphabet}
+ \begin{center}
+	 \includegraphics[width=0.8\textwidth]{imgs/griechisches_alphabet.png}
+ \end{center}
+  \section{Polyeder}
+ \begin{center}
+	 \includegraphics[width=\textwidth]{imgs/polyeder.png}
+ \end{center}
+ \newpage
+ \section{Sinus, Cosinus und Tangens Tabelle}
+ \begin{tabularx}{\textwidth}{X|X|X|X|X|X}
+ $\alpha$&$0^\circ$&$30^\circ$&$45^\circ$&$60^\circ$&$90^\circ$\\\hline
+ $\sin$&0&$\frac{1}{2}$&$\frac{1}{2}\sqrt{2}$&$\frac{1}{2}\sqrt{3}$&1\\ \hline
+ $\sin$ Merkhilfe&$ \frac{1}{2}\sqrt{0}$&$\frac{1}{2}\sqrt{1}$&$\frac{1}{2}\sqrt{2}$&$\frac{1}{2}\sqrt{3}$&$\frac{1}{2}\sqrt{4}$\\ \hline
+ $\cos$&1&$\frac{1}{2}\sqrt{3}$&$\frac{1}{2}\sqrt{2}$&$\frac{1}{2}$&0\\ \hline
+ $\tan$&0&$\frac{1}{3}\sqrt{3}$&1&$\sqrt{3}$& nicht definiert
+ \end{tabularx}
+
+%-------------- Ende --------------
+
+\end{document}
+
